@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --black: #000000;
+  --charcoal: #2f4550;
+  --paynes-gray: #586f7c;
+  --light-blue: #b8dbd9;
+  --ghost-white: #f4f4f9;
+  
+  --background: var(--ghost-white);
+  --foreground: var(--charcoal);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--charcoal);
+    --foreground: var(--ghost-white);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add custom utility classes for the new color scheme */
+.bg-charcoal {
+  background-color: var(--charcoal);
+}
+
+.bg-paynes-gray {
+  background-color: var(--paynes-gray);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+.bg-ghost-white {
+  background-color: var(--ghost-white);
+}
+
+.text-charcoal {
+  color: var(--charcoal);
+}
+
+.text-paynes-gray {
+  color: var(--paynes-gray);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+
+.text-ghost-white {
+  color: var(--ghost-white);
+}
+
+.border-light-blue {
+  border-color: var(--light-blue);
+}
+
+.border-paynes-gray {
+  border-color: var(--paynes-gray);
+}

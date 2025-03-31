@@ -24,9 +24,9 @@ export default function BrokersPage() {
             {/* XM */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-6">
-                  <div className="h-16 flex items-center justify-center mb-2">
-                    <Image src="/brokers/xm.jpg" alt="XM" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1" />
+                <CardItem translateZ="50" className="p-6 w-full">
+                  <div className="flex items-center justify-center w-full h-16 mb-2">
+                    <Image src="/brokers/xm.jpg" alt="XM" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1 mx-auto" />
                   </div>
                   
                   <div className="flex items-center mb-4">
@@ -89,9 +89,9 @@ export default function BrokersPage() {
             {/* EBC Financial Group */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-6">
-                  <div className="h-16 flex items-center justify-center mb-2">
-                    <Image src="/brokers/ebc.jpg" alt="EBC Financial Group" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1" />
+                <CardItem translateZ="50" className="p-6 w-full">
+                  <div className="flex items-center justify-center w-full h-16 mb-2">
+                    <Image src="/brokers/ebc.jpg" alt="EBC Financial Group" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1 mx-auto" />
                   </div>
                   
                   <div className="flex items-center mb-4">
@@ -154,9 +154,9 @@ export default function BrokersPage() {
             {/* Eightcap */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-6">
-                  <div className="h-16 flex items-center justify-center mb-2">
-                    <Image src="/brokers/eightcap.jpg" alt="Eightcap" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1" />
+                <CardItem translateZ="50" className="p-6 w-full">
+                  <div className="flex items-center justify-center w-full h-16 mb-2">
+                    <Image src="/brokers/eightcap.jpg" alt="Eightcap" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1 mx-auto" />
                   </div>
                   
                   <div className="flex items-center mb-4">
@@ -219,9 +219,9 @@ export default function BrokersPage() {
             {/* AvaTrade */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-6">
-                  <div className="h-16 flex items-center justify-center mb-2">
-                    <Image src="/brokers/avatrade.jpg" alt="AvaTrade" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1" />
+                <CardItem translateZ="50" className="p-6 w-full">
+                  <div className="flex items-center justify-center w-full h-16 mb-2">
+                    <Image src="/brokers/avatrade.jpg" alt="AvaTrade" width={150} height={40} className="object-contain border border-paynes-gray/30 rounded-md p-1 mx-auto" />
                   </div>
                   
                   <div className="flex items-center mb-4">

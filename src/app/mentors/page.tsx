@@ -20,12 +20,12 @@ export default function MentorsPage() {
             Connect with experienced trading mentors who have been vetted for their expertise and teaching ability. Whether you're a beginner or advanced trader, find the right mentor to accelerate your trading journey.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex justify-center items-center">
             {/* Capital Bulls */}
             <CardContainer className="inter-var">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                 <CardItem translateZ="50" className="text-xl font-bold text-charcoal dark:text-ghost-white">
-                  Capital Bulls
+                  Capital Bulls - Rashied Chauke
                 </CardItem>
                 <CardItem as="p" translateZ="60" className="text-paynes-gray dark:text-light-blue text-sm mt-2">
                   Premium US30 trading signals and educational community.
@@ -35,7 +35,7 @@ export default function MentorsPage() {
                     src="/mentors/capital-bulls.jpg"
                     height="225"
                     width="400"
-                    className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl border-2 border-paynes-gray/30"
+                    className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl border-2 border-paynes-gray/30 mx-auto"
                     alt="Capital Bulls"
                   />
                 </CardItem>
@@ -47,13 +47,15 @@ export default function MentorsPage() {
                     </div>
                   </CardItem>
                   <CardItem translateZ="40" className="text-light-blue">
-                    $49.99/month
+                    R1250/week
                   </CardItem>
                 </div>
                 <CardItem translateZ="50" className="w-full mt-6">
-                  <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold">
-                    View Profile
-                  </Button>
+                  <a href="https://tradewithcapitalbulls.com" target="_blank" rel="noopener noreferrer" className="w-full block">
+                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold">
+                      Visit Website
+                    </Button>
+                  </a>
                 </CardItem>
               </CardBody>
             </CardContainer>

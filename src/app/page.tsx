@@ -73,15 +73,15 @@ export default function Home() {
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
               Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-light-blue" />
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div className="flex justify-center items-center">
               {/* Mentor Card */}
-              <CardContainer className="inter-var">
+              <CardContainer className="inter-var max-w-md w-full">
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
                   >
-                    Capital Bulls
+                    Capital Bulls - Rashied Chauke
                   </CardItem>
                   <CardItem
                     as="p"
@@ -95,7 +95,7 @@ export default function Home() {
                       src="/mentors/capital-bulls.jpg"
                       height="225"
                       width="400"
-                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-paynes-gray/30"
+                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                       alt="Capital Bulls"
                     />
                   </CardItem>
@@ -108,14 +108,20 @@ export default function Home() {
                         <span className="text-paynes-gray mr-2">★★★★★</span> 4.7/5
                       </div>
                     </CardItem>
-                    <Link href="/mentors">
+                    <CardItem
+                      translateZ={40}
+                      className="px-4 py-2 rounded-xl text-light-blue text-xs font-bold"
+                    >
+                      R1250/week
+                    </CardItem>
+                    <a href="https://tradewithcapitalbulls.com" target="_blank" rel="noopener noreferrer">
                       <CardItem
                         translateZ={40}
                         className="px-4 py-2 rounded-xl bg-light-blue text-charcoal text-xs font-bold"
                       >
-                        View Profile
+                        Visit Website
                       </CardItem>
-                    </Link>
+                    </a>
                   </div>
                 </CardBody>
               </CardContainer>
@@ -134,7 +140,7 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
                   >
                     FTMO
                   </CardItem>
@@ -150,7 +156,7 @@ export default function Home() {
                       src="/prop-firms/ftmo.jpg"
                       height="225"
                       width="400"
-                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-paynes-gray/30"
+                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                       alt="FTMO"
                     />
                   </CardItem>
@@ -180,7 +186,7 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
                   >
                     FXify
                   </CardItem>
@@ -196,7 +202,7 @@ export default function Home() {
                       src="/prop-firms/fxify.jpg"
                       height="225"
                       width="400"
-                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-paynes-gray/30"
+                      className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl mx-auto"
                       alt="FXify"
                     />
                   </CardItem>
@@ -226,7 +232,7 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
                   >
                     AuraFunded
                   </CardItem>
@@ -242,7 +248,7 @@ export default function Home() {
                       src="/prop-firms/aurafunded.jpg"
                       height="225"
                       width="400"
-                      className="h-40 w-full object-cover rounded-xl group-hover/card:shadow-xl border border-paynes-gray/30"
+                      className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl mx-auto"
                       alt="AuraFunded"
                     />
                   </CardItem>
@@ -358,7 +364,7 @@ export default function Home() {
                       alt="Riaan Young" 
                       width={48} 
                       height={48}
-                      className="object-cover w-full h-full" 
+                      className="object-cover w-full h-full mx-auto" 
                     />
                   </div>
                   <div className="ml-4">
@@ -377,7 +383,7 @@ export default function Home() {
                       alt="Koketso" 
                       width={48} 
                       height={48}
-                      className="object-cover w-full h-full" 
+                      className="object-cover w-full h-full mx-auto" 
                     />
                   </div>
                   <div className="ml-4">
@@ -396,7 +402,7 @@ export default function Home() {
                       alt="Tiaan Saayman" 
                       width={48} 
                       height={48}
-                      className="object-cover w-full h-full" 
+                      className="object-cover w-full h-full mx-auto" 
                     />
                   </div>
                   <div className="ml-4">

@@ -37,13 +37,13 @@ export default function PropFirmsPage() {
             {/* FTMO */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-8">
+                <CardItem translateZ="50" className="p-8 w-full">
                   <div className="h-24 flex items-center justify-center mb-4">
                     <Image
                       src="/prop-firms/ftmo.jpg"
                       height="80"
                       width="200"
-                      className="object-contain border-2 border-paynes-gray/30 rounded-md p-2 bg-white dark:bg-paynes-gray/10" 
+                      className="object-contain rounded-md p-2 bg-white dark:bg-paynes-gray/10 max-h-full max-w-full" 
                       alt="FTMO"
                     />
                   </div>
@@ -107,13 +107,13 @@ export default function PropFirmsPage() {
             {/* FXIFY */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-8">
+                <CardItem translateZ="50" className="p-8 w-full">
                   <div className="h-24 flex items-center justify-center mb-4">
                     <Image
                       src="/prop-firms/fxify.jpg"
                       height="80"
                       width="200"
-                      className="object-contain border-2 border-paynes-gray/30 rounded-md p-2 bg-white dark:bg-paynes-gray/10" 
+                      className="object-contain rounded-md p-2 bg-white dark:bg-paynes-gray/10 max-h-full max-w-full" 
                       alt="FXIFY"
                     />
                   </div>
@@ -182,13 +182,13 @@ export default function PropFirmsPage() {
             {/* AuraFunded */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
-                <CardItem translateZ="50" className="p-8">
+                <CardItem translateZ="50" className="p-8 w-full">
                   <div className="h-24 flex items-center justify-center mb-4">
                     <Image
                       src="/prop-firms/aurafunded.jpg"
                       height="80"
                       width="200"
-                      className="object-contain border-2 border-paynes-gray/30 rounded-md p-2 bg-white dark:bg-paynes-gray/10" 
+                      className="object-contain rounded-md p-2 bg-white dark:bg-paynes-gray/10 max-h-full max-w-full" 
                       alt="AuraFunded"
                     />
                   </div>

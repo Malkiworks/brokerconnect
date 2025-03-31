@@ -9,7 +9,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { StaggeredList } from "@/components/ui/scroll-animations";
 import Image from "next/image";
 import Link from "next/link";
-import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaTwitter, FaLinkedin, FaInstagram, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaTelegram } from "react-icons/fa";
+import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaTwitter, FaLinkedin, FaInstagram, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaTelegram, FaCheck, FaLightbulb, FaAward, FaCreditCard, FaUnlock, FaRocket } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -49,35 +49,150 @@ export default function Home() {
               </div>
             }
           >
-            <div className="relative w-full h-full bg-ghost-white dark:bg-charcoal flex items-center justify-center">
+            <div className="relative w-full h-full bg-ghost-white dark:bg-charcoal flex flex-col items-center justify-start overflow-y-auto">
               <div className="absolute inset-0 bg-gradient-to-r from-light-blue/20 to-paynes-gray/20 opacity-50" />
-              <div className="p-4 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto">
-                <h2 className="text-2xl text-center mb-4 text-charcoal dark:text-ghost-white flex items-center justify-center">
-                  <FaHandshake className="mr-2 text-light-blue" /> Services
+              
+              {/* Main Services Section */}
+              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full mb-8">
+                <h2 className="text-2xl md:text-3xl text-center mb-8 text-charcoal dark:text-ghost-white flex items-center justify-center">
+                  <FaHandshake className="mr-2 text-light-blue" /> Our Services
                 </h2>
                 <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-6" staggerDelay={0.1}>
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
-                      <FaGraduationCap className="mr-2 text-light-blue" /> Mentors
-                    </h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm">Find expert trading mentors to help grow your skills</p>
+                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
+                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                      <FaGraduationCap />
+                    </div>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Expert Mentor</h3>
+                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Connect with our premium verified trading mentor - Capital Bulls by Rashied Chauke - specializing in US30 trading</p>
+                    <div className="mt-4 flex justify-center">
+                      <Link href="/mentors">
+                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                          View Mentor
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                   
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
-                      <FaChartLine className="mr-2 text-light-blue" /> Find a broker
-                    </h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm">Discover reliable trading platforms</p>
+                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
+                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                      <FaChartLine />
+                    </div>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Verified Brokers</h3>
+                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Access our handpicked selection of 3+ trusted brokers including XM, EBC Financial Group, and Eightcap</p>
+                    <div className="mt-4 flex justify-center">
+                      <Link href="/brokers">
+                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                          Find Brokers
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                   
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
-                      <FaShieldAlt className="mr-2 text-light-blue" /> Trusted brokers
-                    </h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm">Vetted for reliability and safety</p>
+                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
+                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                      <FaBuilding />
+                    </div>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Prop Firms</h3>
+                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Get funded through our 3 verified prop firms - FTMO, FXify, and AuraFunded - with capital from $100K to $500K</p>
+                    <div className="mt-4 flex justify-center">
+                      <Link href="/prop-firms">
+                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                          Explore Firms
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
                 </StaggeredList>
               </div>
+              
+              {/* Why Choose Us */}
+              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full mb-8">
+                <h2 className="text-2xl text-center mb-6 text-charcoal dark:text-ghost-white flex items-center justify-center">
+                  <FaAward className="mr-2 text-light-blue" /> Why Choose BrokerConnect
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="flex items-start space-x-3">
+                    <div className="text-light-blue mt-1"><FaCheck /></div>
+                    <div>
+                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Quality Over Quantity</h3>
+                      <p className="text-paynes-gray dark:text-light-blue text-sm">We focus on a small, carefully selected group of top-tier brokers, props, and mentors rather than an overwhelming list</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="text-light-blue mt-1"><FaShieldAlt /></div>
+                    <div>
+                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Personally Verified</h3>
+                      <p className="text-paynes-gray dark:text-light-blue text-sm">Each partner on our platform has been personally vetted to ensure maximum reliability and transparency</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="text-light-blue mt-1"><FaLightbulb /></div>
+                    <div>
+                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Direct Connections</h3>
+                      <p className="text-paynes-gray dark:text-light-blue text-sm">Get immediate access to Capital Bulls mentorship and direct links to top prop firms without the confusion</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="text-light-blue mt-1"><FaUsers /></div>
+                    <div>
+                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Growing Community</h3>
+                      <p className="text-paynes-gray dark:text-light-blue text-sm">Join our expanding network of traders who benefit from our curated partnerships and reliable recommendations</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Stats Section */}
+              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full">
+                <h2 className="text-xl text-center mb-8 text-charcoal dark:text-ghost-white">Trusted By Traders Worldwide</h2>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
+                    <div className="text-3xl font-bold text-light-blue mb-1">3+</div>
+                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Verified Brokers</div>
+                  </div>
+                  
+                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
+                    <div className="text-3xl font-bold text-light-blue mb-1">3</div>
+                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Prop Firms</div>
+                  </div>
+                  
+                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
+                    <div className="text-3xl font-bold text-light-blue mb-1">1</div>
+                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Expert Mentor</div>
+                  </div>
+                  
+                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
+                    <div className="text-3xl font-bold text-light-blue mb-1">100+</div>
+                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Monthly Users</div>
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap justify-center gap-4 mt-8">
+                  <Link href="/about">
+                    <Button
+                      variant="outline"
+                      className="text-sm border-light-blue text-charcoal dark:text-ghost-white hover:bg-light-blue/20"
+                      icon={<FaInfoCircle className="mr-2" />}
+                    >
+                      About Us
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button
+                      className="text-sm bg-light-blue hover:bg-paynes-gray text-charcoal"
+                      icon={<FaEnvelope className="mr-2" />}
+                    >
+                      Contact Us
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Extra spacer for visual breathing room */}
+              <div className="h-8"></div>
             </div>
           </ContainerScroll>
         </section>

@@ -18,6 +18,43 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(88, 111, 124, 0.1); /* paynes-gray with opacity */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(184, 219, 217, 0.8); /* light-blue with opacity */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-blue) rgba(88, 111, 124, 0.1);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-light-blue {
+  scrollbar-color: var(--light-blue) transparent;
+}
+
+.scrollbar-track-paynes-gray\/20 {
+  scrollbar-color: var(--light-blue) rgba(88, 111, 124, 0.2);
+}
+
 /* Disable smooth scrolling for users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   :root {

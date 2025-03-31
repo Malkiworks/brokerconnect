@@ -14,10 +14,13 @@ const nextConfig = {
     // Warning instead of error is often a good compromise
     ignoreDuringBuilds: true,
   },
-  // Output configuration
-  output: 'standalone',
-  // Ensure trailing slashes are handled properly
-  trailingSlash: true,
+  // Change to static export for Render static site
+  output: 'export',
+  // Remove trailingSlash to handle paths better
+  // trailingSlash: true,
+  
+  // Add basePath if your app is not being served from the root
+  // basePath: '',
 };
 
 module.exports = nextConfig; 

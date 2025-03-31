@@ -7,7 +7,7 @@ import ScrollManager from "@/components/ui/scroll-manager";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "TradingEdu - brokerConnect",
+  title: "brokerConnect - find your broker",
   description: "Verified Brokers, Trusted Mentors, Prop Firm Funding",
 };
 

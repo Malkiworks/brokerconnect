@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import { FaQuestionCircle, FaChevronUp, FaChevronDown, FaEnvelope, FaInfoCircle, FaLightbulb, FaBuilding, FaUserTie, FaShieldAlt, FaExclamationTriangle, FaGraduationCap, FaDollarSign, FaListAlt, FaCommentDots } from "react-icons/fa";
 
 // Define FAQ item type
@@ -104,20 +106,22 @@ export default function FAQPage() {
     <>
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-4xl mx-auto">
+        <AnimatedSection animation="fade" className="max-w-4xl mx-auto">
           <SectionHeader
             icon={<FaQuestionCircle />}
             title="Frequently Asked Questions"
             subtitle="Find answers to common questions about brokerConnect, our partners, and how we can help you on your trading journey."
           />
 
-          <div className="bg-ghost-white/70 dark:bg-charcoal/60 rounded-xl border border-light-blue/20 p-8 shadow-lg">
-            {faqs.map((faq, index) => (
-              <FAQItem key={index} question={faq.question} answer={faq.answer} icon={faq.icon} />
-            ))}
-          </div>
+          <AnimatedSection animation="slide" direction="up" className="bg-ghost-white/70 dark:bg-charcoal/60 rounded-xl border border-light-blue/20 p-8 shadow-lg">
+            <StaggeredList staggerDelay={0.08}>
+              {faqs.map((faq, index) => (
+                <FAQItem key={index} question={faq.question} answer={faq.answer} icon={faq.icon} />
+              ))}
+            </StaggeredList>
+          </AnimatedSection>
 
-          <div className="mt-16 text-center">
+          <AnimatedSection animation="slide" direction="up" delay={0.3} className="mt-16 text-center">
             <p className="text-paynes-gray dark:text-light-blue mb-6">
               Still have questions? We're here to help!
             </p>
@@ -130,8 +134,8 @@ export default function FAQPage() {
                 Contact Us
               </Button>
             </Link>
-          </div>
-        </div>
+          </AnimatedSection>
+        </AnimatedSection>
       </main>
     </>
   );

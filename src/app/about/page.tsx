@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/card-container";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import Image from "next/image";
 import Link from "next/link";
 import { FaInfoCircle, FaHistory, FaBullseye, FaCheckCircle, FaSearch, FaBullhorn, FaUsers, FaEnvelope, FaQuestionCircle, FaHandshake } from "react-icons/fa";
@@ -14,7 +16,7 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-7xl mx-auto">
+        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
           <SectionHeader
             icon={<FaInfoCircle />}
             title="About brokerConnect"
@@ -22,7 +24,7 @@ export default function AboutPage() {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div>
+            <AnimatedSection animation="slide" direction="left" className="">
               <h2 className="text-2xl md:text-4xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
                 <FaHistory className="mr-3 text-light-blue" /> Our Story
               </h2>
@@ -37,8 +39,8 @@ export default function AboutPage() {
                   Today, brokerConnect serves traders worldwide by providing a comprehensive directory of verified trading partners, ensuring that every broker, prop firm, and mentor listed on our platform meets our rigorous standards for reliability and transparency.
                 </p>
               </div>
-            </div>
-            <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20">
+            </AnimatedSection>
+            <AnimatedSection animation="slide" direction="right" className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20">
               <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
                 <FaBullseye className="mr-3 text-light-blue" /> Our Mission
               </h2>
@@ -53,7 +55,7 @@ export default function AboutPage() {
                   By providing this valuable service free of charge to traders, we're democratizing access to reliable trading partnerships and creating a more level playing field for traders of all experience levels.
                 </p>
               </div>
-            </div>
+            </AnimatedSection>
           </div>
           
           <div className="mb-20">
@@ -61,7 +63,7 @@ export default function AboutPage() {
               icon={<FaHandshake />}
               title="Our Core Values"
             />
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-8" staggerDelay={0.15}>
               <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300 hover:shadow-lg">
                 <div className="h-16 w-16 bg-light-blue/20 rounded-full flex items-center justify-center mb-6">
                   <FaCheckCircle className="text-light-blue text-2xl" />
@@ -91,10 +93,10 @@ export default function AboutPage() {
                   We stand up for traders' rights and work to expose fraudulent actors in the industry. Our platform provides a channel for traders to report suspicious activities and for us to investigate and take appropriate action.
                 </p>
               </div>
-            </div>
+            </StaggeredList>
           </div>
           
-          <div className="bg-ghost-white dark:bg-charcoal p-8 md:p-12 rounded-xl border border-paynes-gray/20 text-center shadow-lg">
+          <AnimatedSection animation="slide" direction="up" className="bg-ghost-white dark:bg-charcoal p-8 md:p-12 rounded-xl border border-paynes-gray/20 text-center shadow-lg">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center justify-center">
               <FaUsers className="mr-3 text-light-blue" /> Join Our Mission
             </h2>
@@ -121,8 +123,8 @@ export default function AboutPage() {
                 </Button>
               </Link>
             </div>
-          </div>
-        </div>
+          </AnimatedSection>
+        </AnimatedSection>
       </main>
     </>
   );

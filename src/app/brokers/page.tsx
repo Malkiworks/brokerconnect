@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/card-container";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import { FaChartLine, FaMoneyBillWave, FaGlobe, FaChartBar, FaEnvelope, FaShieldAlt, FaCreditCard, FaCheckCircle, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function BrokersPage() {
@@ -14,14 +16,14 @@ export default function BrokersPage() {
     <>
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-7xl mx-auto">
+        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
           <SectionHeader
             icon={<FaChartLine />}
             title="Top Brokers"
             subtitle="Here are a list of TOP TIER brokers suited for a trader of any experience level."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <StaggeredList className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" staggerDelay={0.1}>
             {/* XM */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
@@ -289,8 +291,8 @@ export default function BrokersPage() {
                 </CardItem>
               </CardBody>
             </CardContainer>
-          </div>
-        </div>
+          </StaggeredList>
+        </AnimatedSection>
       </main>
     </>
   );

@@ -5,6 +5,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import { FaEnvelope, FaPhone, FaTwitter, FaLinkedin, FaInstagram, FaInfoCircle, FaQuestionCircle } from "react-icons/fa";
 
 export default function ContactPage() {
@@ -12,14 +14,14 @@ export default function ContactPage() {
     <>
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-7xl mx-auto">
+        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
           <SectionHeader 
             title="Get in Touch"
             icon={<FaEnvelope />}
             subtitle="Have questions about our services or need support with your trading journey? Our team is here to help."
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" staggerDelay={0.1}>
             <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="text-light-blue text-4xl mb-4 flex justify-center">
                 <FaEnvelope />
@@ -66,9 +68,9 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
-          </div>
+          </StaggeredList>
           
-          <div>
+          <AnimatedSection animation="slide" direction="up" delay={0.3} className="">
             <div className="mt-12 text-center">
               <p className="text-paynes-gray dark:text-light-blue mb-4">
                 Want to learn more about our services before reaching out?
@@ -96,8 +98,8 @@ export default function ContactPage() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
+          </AnimatedSection>
+        </AnimatedSection>
       </main>
     </>
   );

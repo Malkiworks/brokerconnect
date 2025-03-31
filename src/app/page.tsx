@@ -5,6 +5,8 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/card-containe
 import { ContainerScroll } from "@/components/ui/container-scroll";
 import { FlipWords } from "@/components/ui/flip-words";
 import { Navbar } from "@/components/Navbar";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import Image from "next/image";
 import Link from "next/link";
 import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaTwitter, FaLinkedin, FaInstagram, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaTelegram } from "react-icons/fa";
@@ -53,7 +55,7 @@ export default function Home() {
                 <h2 className="text-2xl text-center mb-4 text-charcoal dark:text-ghost-white flex items-center justify-center">
                   <FaHandshake className="mr-2 text-light-blue" /> Services
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-6" staggerDelay={0.1}>
                   <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
                     <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
                       <FaGraduationCap className="mr-2 text-light-blue" /> Mentors
@@ -74,14 +76,14 @@ export default function Home() {
                     </h3>
                     <p className="text-paynes-gray dark:text-light-blue text-sm">Vetted for reliability and safety</p>
                   </div>
-                </div>
+                </StaggeredList>
               </div>
             </div>
           </ContainerScroll>
         </section>
 
         {/* Broker/Prop Firm Showcase Section */}
-        <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/30">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/30">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
               <FaUserTie className="mr-3 text-light-blue" /> Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-light-blue ml-2" />
@@ -140,14 +142,14 @@ export default function Home() {
               </CardContainer>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
-        <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/30 dark:to-charcoal">
+        <AnimatedSection animation="slide" direction="up" delay={0.1} className="py-20 px-4 md:px-8 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/30 dark:to-charcoal">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
               <FaBuilding className="mr-3 text-light-blue" /> Trusted <FlipWords words={["Prop Firms", "Funding Partners", "Capital Providers", "Trading Firms"]} className="text-light-blue ml-2" />
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-10" staggerDelay={0.1}>
               {/* FTMO Prop Firm Card */}
               <CardContainer className="inter-var">
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
@@ -285,12 +287,12 @@ export default function Home() {
                   </div>
                 </CardBody>
               </CardContainer>
-            </div>
+            </StaggeredList>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Key Features Section */}
-        <section className="py-20 px-4 bg-ghost-white dark:bg-charcoal relative z-20">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-ghost-white dark:bg-charcoal relative z-20">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
               What's This <FlipWords words={["About?", "Platform?", "Service?", "Mission?"]} className="text-light-blue" />
@@ -309,10 +311,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Why Use Our Website Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
               Why use <FlipWords words={["our website?", "brokerConnect?", "us for trading?", "verified partners?"]} className="text-light-blue" />
@@ -339,10 +341,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Recommended Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/50 dark:to-charcoal">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/50 dark:to-charcoal">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
               Recommended <FlipWords words={["for you", "brokers", "mentors", "prop firms"]} className="text-light-blue" />
@@ -359,10 +361,10 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
               <FlipWords words={["Testimonials", "Success Stories", "Real Traders", "User Feedback"]} className="text-light-blue" />
@@ -427,16 +429,16 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
+        </AnimatedSection>
 
         {/* Trusted by Section */}
-        <section className="py-20 px-4 md:px-8 bg-ghost-white dark:bg-charcoal">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-ghost-white dark:bg-charcoal">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
               <FaUsers className="mr-3 text-light-blue" /> Trusted by Thousands
             </h2>
           </div>
-        </section>
+        </AnimatedSection>
         
 
         {/* Footer */}

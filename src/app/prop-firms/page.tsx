@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/card-container";
 import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
+import { AnimatedSection } from "@/components/ui/animated-section";
+import { StaggeredList } from "@/components/ui/scroll-animations";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBuilding, FaMoneyBillWave, FaPercentage, FaChartLine, FaCalendarAlt, FaCheckCircle, FaEnvelope, FaGlobe, FaMapMarkerAlt, FaInfoCircle, FaUser, FaExternalLinkAlt } from "react-icons/fa";
@@ -14,14 +16,14 @@ export default function PropFirmsPage() {
     <>
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-7xl mx-auto">
+        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
           <SectionHeader
             icon={<FaBuilding />}
             title="Top Prop Firms"
             subtitle="Prop Firms we recommend. Here are a list of TOP TIER Prop Firms suited for a trader of any experience level."
           />
           
-          <div className="my-12 bg-ghost-white dark:bg-paynes-gray/40 p-8 rounded-xl border border-light-blue/20 shadow-lg">
+          <AnimatedSection animation="slide" direction="up" className="my-12 bg-ghost-white dark:bg-paynes-gray/40 p-8 rounded-xl border border-light-blue/20 shadow-lg">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
               <FaInfoCircle className="mr-3 text-light-blue" /> What is a Prop Trading Firm?
             </h2>
@@ -34,9 +36,9 @@ export default function PropFirmsPage() {
             <p className="text-paynes-gray dark:text-light-blue">
               This model creates a win-win situation: traders gain access to larger capital without risking substantial personal funds, while prop firms benefit from the skills of profitable traders.
             </p>
-          </div>
+          </AnimatedSection>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-4" staggerDelay={0.15}>
             {/* FTMO */}
             <CardContainer className="inter-var w-full">
               <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-full h-auto rounded-xl border">
@@ -326,7 +328,7 @@ export default function PropFirmsPage() {
                 </CardItem>
               </CardBody>
             </CardContainer>
-          </div>
+          </StaggeredList>
           
           <div className="mt-16 bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center">
             <h2 className="text-2xl font-bold mb-4 text-charcoal dark:text-ghost-white">Looking for a Different Prop Firm?</h2>
@@ -342,7 +344,7 @@ export default function PropFirmsPage() {
               </Button>
             </Link>
           </div>
-        </div>
+        </AnimatedSection>
       </main>
     </>
   );

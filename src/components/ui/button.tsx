@@ -18,6 +18,8 @@ export function Button({
   borderClassName,
   duration,
   className,
+  icon,
+  iconPosition = "left",
   ...otherProps
 }: {
   borderRadius?: string;
@@ -27,6 +29,8 @@ export function Button({
   borderClassName?: string;
   duration?: number;
   className?: string;
+  icon?: React.ReactNode;
+  iconPosition?: "left" | "right";
   [key: string]: any;
 }) {
   return (
@@ -63,7 +67,68 @@ export function Button({
           borderRadius: `calc(${borderRadius} * 0.96)`,
         }}
       >
+        {icon && iconPosition === "left" && <span className="mr-2">{icon}</span>}
         {children}
+        {icon && iconPosition === "right" && <span className="ml-2">{icon}</span>}
+      </div>
+    </Component>
+  );
+}
+
+// Icon-only circular button
+export function ButtonIcon({
+  icon,
+  as: Component = "button",
+  containerClassName,
+  borderClassName,
+  duration,
+  className,
+  size = "md",
+  ...otherProps
+}: {
+  icon: React.ReactNode;
+  as?: any;
+  containerClassName?: string;
+  borderClassName?: string;
+  duration?: number;
+  className?: string;
+  size?: "sm" | "md" | "lg";
+  [key: string]: any;
+}) {
+  // Size mapping
+  const sizes = {
+    sm: "h-10 w-10",
+    md: "h-12 w-12",
+    lg: "h-14 w-14",
+  };
+
+  return (
+    <Component
+      className={cn(
+        "relative overflow-hidden rounded-full bg-transparent p-[1px]",
+        sizes[size],
+        containerClassName,
+      )}
+      {...otherProps}
+    >
+      <div className="absolute inset-0 rounded-full">
+        <MovingBorder duration={duration} rx="50%" ry="50%">
+          <div
+            className={cn(
+              "h-20 w-20 bg-[radial-gradient(#b8dbd9_40%,transparent_60%)] opacity-[0.8]",
+              borderClassName,
+            )}
+          />
+        </MovingBorder>
+      </div>
+
+      <div
+        className={cn(
+          "relative flex h-full w-full items-center justify-center rounded-full border border-light-blue/30 bg-charcoal/[0.8] text-lg text-ghost-white antialiased backdrop-blur-xl",
+          className,
+        )}
+      >
+        {icon}
       </div>
     </Component>
   );

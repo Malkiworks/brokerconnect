@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { useState } from "react";
+import { FaHome, FaChartLine, FaUserTie, FaBuilding, FaInfoCircle, FaEnvelope, FaQuestion, FaExclamationTriangle } from "react-icons/fa";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,32 +15,32 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-ghost-white">
-                brokerConnect
+              <Link href="/" className="text-2xl font-bold text-ghost-white flex items-center">
+                <FaChartLine className="mr-2 text-light-blue" /> brokerConnect
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  Home
+                <Link href="/" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaHome className="mr-1" /> Home
                 </Link>
-                <Link href="/brokers" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  Brokers
+                <Link href="/brokers" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaChartLine className="mr-1" /> Brokers
                 </Link>
-                <Link href="/mentors" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  Mentors
+                <Link href="/mentors" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaUserTie className="mr-1" /> Mentors
                 </Link>
-                <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  Prop Firms
+                <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaBuilding className="mr-1" /> Prop Firms
                 </Link>
-                <Link href="/about" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  About
+                <Link href="/about" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaInfoCircle className="mr-1" /> About
                 </Link>
-                <Link href="/contact" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  Contact
+                <Link href="/contact" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaEnvelope className="mr-1" /> Contact
                 </Link>
-                <Link href="/faq" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium">
-                  FAQ
+                <Link href="/faq" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                  <FaQuestion className="mr-1" /> FAQ
                 </Link>
               </div>
             </div>
@@ -49,9 +50,9 @@ export function Navbar() {
               <Link href="/contact">
                 <Button
                   containerClassName="w-36 h-9"
-                  className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium"
+                  className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium flex items-center justify-center"
                 >
-                  Report Scam
+                  <FaExclamationTriangle className="mr-1" /> Report Scam
                 </Button>
               </Link>
             </div>
@@ -103,34 +104,34 @@ export function Navbar() {
       {/* Mobile menu, show/hide based on menu state */}
       <div className={cn("md:hidden", isMenuOpen ? "block" : "hidden")}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-charcoal">
-          <Link href="/" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            Home
+          <Link href="/" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaHome className="mr-2" /> Home
           </Link>
-          <Link href="/brokers" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            Brokers
+          <Link href="/brokers" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaChartLine className="mr-2" /> Brokers
           </Link>
-          <Link href="/mentors" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            Mentors
+          <Link href="/mentors" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaUserTie className="mr-2" /> Mentors
           </Link>
-          <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            Prop Firms
+          <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaBuilding className="mr-2" /> Prop Firms
           </Link>
-          <Link href="/about" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            About
+          <Link href="/about" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaInfoCircle className="mr-2" /> About
           </Link>
-          <Link href="/contact" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            Contact
+          <Link href="/contact" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaEnvelope className="mr-2" /> Contact
           </Link>
-          <Link href="/faq" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium">
-            FAQ
+          <Link href="/faq" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+            <FaQuestion className="mr-2" /> FAQ
           </Link>
           <div className="mt-4">
             <Link href="/contact">
               <Button
                 containerClassName="w-full h-10"
-                className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium"
+                className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium flex items-center justify-center"
               >
-                Report Scam
+                <FaExclamationTriangle className="mr-2" /> Report Scam
               </Button>
             </Link>
           </div>

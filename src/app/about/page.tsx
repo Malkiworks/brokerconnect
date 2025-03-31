@@ -4,8 +4,10 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/card-container";
 import { FlipWords } from "@/components/ui/flip-words";
+import { SectionHeader } from "@/components/ui/section-header";
 import Image from "next/image";
 import Link from "next/link";
+import { FaInfoCircle, FaHistory, FaBullseye, FaCheckCircle, FaSearch, FaBullhorn, FaUsers, FaEnvelope, FaQuestionCircle, FaHandshake } from "react-icons/fa";
 
 export default function AboutPage() {
   return (
@@ -13,18 +15,17 @@ export default function AboutPage() {
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-charcoal dark:text-ghost-white">
-              About <FlipWords words={["brokerConnect", "Our Mission", "Our Team", "Our Values"]} className="text-light-blue" />
-            </h1>
-            <p className="text-lg text-paynes-gray dark:text-light-blue max-w-3xl mx-auto">
-              We're on a mission to make trading safer and more accessible by connecting traders with verified brokers, prop firms, and mentors.
-            </p>
-          </div>
+          <SectionHeader
+            icon={<FaInfoCircle />}
+            title="About brokerConnect"
+            subtitle="We're on a mission to make trading safer and more accessible by connecting traders with verified brokers, prop firms, and mentors."
+          />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
             <div>
-              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-charcoal dark:text-ghost-white">Our Story</h2>
+              <h2 className="text-2xl md:text-4xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
+                <FaHistory className="mr-3 text-light-blue" /> Our Story
+              </h2>
               <div className="space-y-4 text-paynes-gray dark:text-light-blue">
                 <p>
                   brokerConnect was founded in 2023 by a team of experienced traders who had encountered numerous challenges finding reliable brokers and legitimate prop firms throughout their trading journeys.
@@ -38,7 +39,9 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white">Our Mission</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
+                <FaBullseye className="mr-3 text-light-blue" /> Our Mission
+              </h2>
               <div className="space-y-4 text-paynes-gray dark:text-light-blue">
                 <p>
                   Our mission is to create a safer trading ecosystem by connecting traders with trusted partners who will support their trading journey rather than hinder it.
@@ -54,13 +57,14 @@ export default function AboutPage() {
           </div>
           
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-charcoal dark:text-ghost-white">
-              Our Core <span className="text-light-blue">Values</span>
-            </h2>
+            <SectionHeader
+              icon={<FaHandshake />}
+              title="Our Core Values"
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300">
+              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300 hover:shadow-lg">
                 <div className="h-16 w-16 bg-light-blue/20 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-light-blue text-2xl">✓</span>
+                  <FaCheckCircle className="text-light-blue text-2xl" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Transparency</h3>
                 <p className="text-paynes-gray dark:text-light-blue">
@@ -68,9 +72,9 @@ export default function AboutPage() {
                 </p>
               </div>
               
-              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300">
+              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300 hover:shadow-lg">
                 <div className="h-16 w-16 bg-light-blue/20 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-light-blue text-2xl">🔍</span>
+                  <FaSearch className="text-light-blue text-2xl" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Diligence</h3>
                 <p className="text-paynes-gray dark:text-light-blue">
@@ -78,9 +82,9 @@ export default function AboutPage() {
                 </p>
               </div>
               
-              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300">
+              <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 hover:border-light-blue/50 transition-all duration-300 hover:shadow-lg">
                 <div className="h-16 w-16 bg-light-blue/20 rounded-full flex items-center justify-center mb-6">
-                  <span className="text-light-blue text-2xl">📢</span>
+                  <FaBullhorn className="text-light-blue text-2xl" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Advocacy</h3>
                 <p className="text-paynes-gray dark:text-light-blue">
@@ -90,11 +94,9 @@ export default function AboutPage() {
             </div>
           </div>
           
-          
-          
-          <div className="bg-ghost-white dark:bg-charcoal p-8 md:p-12 rounded-xl border border-paynes-gray/20 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white">
-              Join Our Mission
+          <div className="bg-ghost-white dark:bg-charcoal p-8 md:p-12 rounded-xl border border-paynes-gray/20 text-center shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center justify-center">
+              <FaUsers className="mr-3 text-light-blue" /> Join Our Mission
             </h2>
             <p className="text-paynes-gray dark:text-light-blue mb-8 max-w-2xl mx-auto">
               Want to help us build a safer trading environment? We're always looking for experienced traders, compliance experts, and industry professionals to join our team.
@@ -104,6 +106,7 @@ export default function AboutPage() {
                 <Button 
                   containerClassName="w-auto h-14"
                   className="bg-light-blue hover:bg-paynes-gray text-charcoal font-medium px-8"
+                  icon={<FaEnvelope />}
                 >
                   Contact Us
                 </Button>
@@ -112,6 +115,7 @@ export default function AboutPage() {
                 <Button 
                   containerClassName="w-auto h-14"
                   className="bg-ghost-white hover:bg-light-blue/50 border border-light-blue text-charcoal dark:text-ghost-white font-medium px-8"
+                  icon={<FaQuestionCircle />}
                 >
                   Learn More
                 </Button>

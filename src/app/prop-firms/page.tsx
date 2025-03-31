@@ -4,8 +4,10 @@ import { Navbar } from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/card-container";
 import { FlipWords } from "@/components/ui/flip-words";
+import { SectionHeader } from "@/components/ui/section-header";
 import Link from "next/link";
 import Image from "next/image";
+import { FaBuilding, FaMoneyBillWave, FaPercentage, FaChartLine, FaCalendarAlt, FaCheckCircle, FaEnvelope, FaGlobe, FaMapMarkerAlt, FaInfoCircle, FaUser, FaExternalLinkAlt } from "react-icons/fa";
 
 export default function PropFirmsPage() {
   return (
@@ -13,15 +15,16 @@ export default function PropFirmsPage() {
       <Navbar />
       <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-center text-4xl md:text-6xl font-bold mb-8 text-charcoal dark:text-ghost-white">
-            <FlipWords words={["Top", "Leading", "Verified", "Trusted"]} className="text-light-blue" /> Prop Firms
-          </h1>
-          <p className="text-center text-paynes-gray dark:text-light-blue text-lg max-w-3xl mx-auto mb-12">
-            Prop Firms we recommend. Here are a list of TOP TIER Prop Firms suited for a trader of any experience level.
-          </p>
+          <SectionHeader
+            icon={<FaBuilding />}
+            title="Top Prop Firms"
+            subtitle="Prop Firms we recommend. Here are a list of TOP TIER Prop Firms suited for a trader of any experience level."
+          />
           
-          <div className="my-12 bg-ghost-white dark:bg-paynes-gray/40 p-8 rounded-xl border border-light-blue/20">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white">What is a Prop Trading Firm?</h2>
+          <div className="my-12 bg-ghost-white dark:bg-paynes-gray/40 p-8 rounded-xl border border-light-blue/20 shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-charcoal dark:text-ghost-white flex items-center">
+              <FaInfoCircle className="mr-3 text-light-blue" /> What is a Prop Trading Firm?
+            </h2>
             <p className="text-paynes-gray dark:text-light-blue mb-4">
               Proprietary trading firms (prop firms) provide capital to traders who have demonstrated their trading skills by passing evaluation challenges. This allows skilled traders to trade with significantly larger accounts than they could personally fund.
             </p>
@@ -49,55 +52,77 @@ export default function PropFirmsPage() {
                   </div>
                   
                   <div className="flex items-center mb-4">
-                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">✓</div>
+                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">
+                      <FaCheckCircle className="text-light-blue" />
+                    </div>
                     <span className="text-charcoal dark:text-ghost-white">Verified</span>
                   </div>
                   
                   <div className="space-y-4 mt-6">
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Funding</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMoneyBillWave className="mr-2" /> Funding:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to $200,000</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Split</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaPercentage className="mr-2" /> Split:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">90/10</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Leverage</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaChartLine className="mr-2" /> Leverage:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to 1:100</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Min trading days</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCalendarAlt className="mr-2" /> Min trading days:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">4</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Consistency Rule</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCheckCircle className="mr-2" /> Consistency Rule:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">No</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Support</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaEnvelope className="mr-2" /> Support:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">support@ftmo.com</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Website</span>
-                      <a href="https://ftmo.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray">www.ftmo.com</a>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaGlobe className="mr-2" /> Website:
+                      </span>
+                      <a href="https://ftmo.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray flex items-center">
+                        www.ftmo.com <FaExternalLinkAlt className="ml-1 text-xs" />
+                      </a>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Location</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMapMarkerAlt className="mr-2" /> Location:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">Prague</span>
                     </CardItem>
                   </div>
                   
                   <CardItem translateZ="80" className="w-full mt-8">
-                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3">
-                      <Link href="https://ftmo.com/" target="_blank" className="block w-full h-full">Purchase a challenge</Link>
+                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3 flex items-center justify-center">
+                      <Link href="https://ftmo.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                        <FaMoneyBillWave className="mr-2" /> Purchase a challenge
+                      </Link>
                     </Button>
                   </CardItem>
                 </CardItem>
@@ -119,60 +144,84 @@ export default function PropFirmsPage() {
                   </div>
                   
                   <div className="flex items-center mb-4">
-                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">✓</div>
+                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">
+                      <FaCheckCircle className="text-light-blue" />
+                    </div>
                     <span className="text-charcoal dark:text-ghost-white">Verified</span>
                   </div>
                   
                   <div className="space-y-4 mt-6">
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Funding</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMoneyBillWave className="mr-2" /> Funding:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to $400,000</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Split</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaPercentage className="mr-2" /> Split:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">90/10</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Leverage</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaChartLine className="mr-2" /> Leverage:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to 1:50</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Min trading days</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCalendarAlt className="mr-2" /> Min trading days:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">instant funding</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Consistency Rule</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCheckCircle className="mr-2" /> Consistency Rule:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">No</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Support</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaEnvelope className="mr-2" /> Support:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">support@fxify.com</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Website</span>
-                      <a href="https://fxify.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray">www.fxify.com</a>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaGlobe className="mr-2" /> Website:
+                      </span>
+                      <a href="https://fxify.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray flex items-center">
+                        www.fxify.com <FaExternalLinkAlt className="ml-1 text-xs" />
+                      </a>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Location</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMapMarkerAlt className="mr-2" /> Location:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">United Kingdom</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Affiliate Code</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaUser className="mr-2" /> Affiliate Code:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">CAPITALBULLS</span>
                     </CardItem>
                   </div>
                   
                   <CardItem translateZ="80" className="w-full mt-8">
-                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3">
-                      <Link href="https://fxify.com/" target="_blank" className="block w-full h-full">Purchase a challenge</Link>
+                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3 flex items-center justify-center">
+                      <Link href="https://fxify.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                        <FaMoneyBillWave className="mr-2" /> Purchase a challenge
+                      </Link>
                     </Button>
                   </CardItem>
                 </CardItem>
@@ -194,60 +243,84 @@ export default function PropFirmsPage() {
                   </div>
                   
                   <div className="flex items-center mb-4">
-                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">✓</div>
+                    <div className="w-5 h-5 rounded-full bg-light-blue/30 flex items-center justify-center mr-2">
+                      <FaCheckCircle className="text-light-blue" />
+                    </div>
                     <span className="text-charcoal dark:text-ghost-white">Verified</span>
                   </div>
                   
                   <div className="space-y-4 mt-6">
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Funding</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMoneyBillWave className="mr-2" /> Funding:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to $500,000</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Split</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaPercentage className="mr-2" /> Split:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to 95/5</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Leverage</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaChartLine className="mr-2" /> Leverage:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">up to 1:100</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Min trading days</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCalendarAlt className="mr-2" /> Min trading days:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">instant funding</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Consistency Rule</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaCheckCircle className="mr-2" /> Consistency Rule:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">No</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Support</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaEnvelope className="mr-2" /> Support:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">support@aurafunded.com</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Website</span>
-                      <a href="https://aurafunded.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray">www.aurafunded.com</a>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaGlobe className="mr-2" /> Website:
+                      </span>
+                      <a href="https://aurafunded.com" target="_blank" rel="noopener noreferrer" className="text-light-blue hover:text-paynes-gray flex items-center">
+                        www.aurafunded.com <FaExternalLinkAlt className="ml-1 text-xs" />
+                      </a>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Location</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaMapMarkerAlt className="mr-2" /> Location:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">Poland</span>
                     </CardItem>
                     
                     <CardItem translateZ="60" className="flex justify-between border-b border-paynes-gray/20 pb-2">
-                      <span className="text-paynes-gray dark:text-light-blue font-medium">Affiliate Code</span>
+                      <span className="text-paynes-gray dark:text-light-blue font-medium flex items-center">
+                        <FaUser className="mr-2" /> Affiliate Code:
+                      </span>
                       <span className="text-charcoal dark:text-ghost-white">CAPITALBULLS</span>
                     </CardItem>
                   </div>
                   
                   <CardItem translateZ="80" className="w-full mt-8">
-                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3">
-                      <Link href="https://aurafunded.com/" target="_blank" className="block w-full h-full">Purchase a challenge</Link>
+                    <Button className="w-full bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold py-3 flex items-center justify-center">
+                      <Link href="https://aurafunded.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                        <FaMoneyBillWave className="mr-2" /> Purchase a challenge
+                      </Link>
                     </Button>
                   </CardItem>
                 </CardItem>

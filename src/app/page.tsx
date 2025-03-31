@@ -7,6 +7,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Navbar } from "@/components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaTwitter, FaLinkedin, FaInstagram, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaTelegram } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -29,13 +30,17 @@ export default function Home() {
                     containerClassName="w-48 h-12"
                     className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium"
                   >
-                    <Link href="/brokers">Find a Broker</Link>
+                    <Link href="/brokers" className="flex items-center">
+                      <FaSearch className="mr-2" /> Find a Broker
+                    </Link>
                   </Button>
                   <Button
                     containerClassName="w-48 h-12"
                     className="bg-ghost-white hover:bg-light-blue/50 border border-light-blue text-charcoal font-medium"
                   >
-                    <Link href="/mentors">Browse Mentors</Link>
+                    <Link href="/mentors" className="flex items-center">
+                      <FaUserTie className="mr-2" /> Browse Mentors
+                    </Link>
                   </Button>
                 </div>
                 <div className="h-20"></div>
@@ -45,20 +50,28 @@ export default function Home() {
             <div className="relative w-full h-full bg-ghost-white dark:bg-charcoal flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-r from-light-blue/20 to-paynes-gray/20 opacity-50" />
               <div className="p-4 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto">
-                <h2 className="text-2xl text-center mb-4 text-charcoal dark:text-ghost-white">Services</h2>
+                <h2 className="text-2xl text-center mb-4 text-charcoal dark:text-ghost-white flex items-center justify-center">
+                  <FaHandshake className="mr-2 text-light-blue" /> Services
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg">Mentors</h3>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
+                      <FaGraduationCap className="mr-2 text-light-blue" /> Mentors
+                    </h3>
                     <p className="text-paynes-gray dark:text-light-blue text-sm">Find expert trading mentors to help grow your skills</p>
                   </div>
                   
                   <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg">Find a broker</h3>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
+                      <FaChartLine className="mr-2 text-light-blue" /> Find a broker
+                    </h3>
                     <p className="text-paynes-gray dark:text-light-blue text-sm">Discover reliable trading platforms</p>
                   </div>
                   
                   <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-4 rounded-lg border border-light-blue/30">
-                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg">Trusted brokers</h3>
+                    <h3 className="text-charcoal dark:text-ghost-white mb-2 text-lg flex items-center">
+                      <FaShieldAlt className="mr-2 text-light-blue" /> Trusted brokers
+                    </h3>
                     <p className="text-paynes-gray dark:text-light-blue text-sm">Vetted for reliability and safety</p>
                   </div>
                 </div>
@@ -70,8 +83,8 @@ export default function Home() {
         {/* Broker/Prop Firm Showcase Section */}
         <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/30">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-light-blue" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
+              <FaUserTie className="mr-3 text-light-blue" /> Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-light-blue ml-2" />
             </h2>
             <div className="flex justify-center items-center">
               {/* Mentor Card */}
@@ -79,16 +92,16 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
                   >
-                    Capital Bulls - Rashied Chauke
+                    <FaUserTie className="mr-2 text-light-blue" /> Capital Bulls - Rashied Chauke
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
                     className="text-paynes-gray text-sm max-w-sm mt-2 dark:text-light-blue"
                   >
-                    Premium US30 trading signals and educational community.
+                    Premium US30 trading and educational community.
                   </CardItem>
                   <CardItem translateZ="100" className="w-full mt-4">
                     <Image
@@ -105,21 +118,21 @@ export default function Home() {
                       className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <span className="text-paynes-gray mr-2">★★★★★</span> 4.7/5
+                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★★</span> 4.7/5
                       </div>
                     </CardItem>
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-light-blue text-xs font-bold"
+                      className="px-4 py-2 rounded-xl text-light-blue text-xs font-bold flex items-center"
                     >
-                      R1250/week
+                      <FaMoneyBillWave className="mr-1" /> R1250/week
                     </CardItem>
                     <a href="https://tradewithcapitalbulls.com" target="_blank" rel="noopener noreferrer">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-light-blue text-charcoal text-xs font-bold"
+                        className="px-4 py-2 rounded-xl bg-light-blue text-charcoal text-xs font-bold flex items-center"
                       >
-                        Visit Website
+                        <FaGlobe className="mr-1" /> Visit Website
                       </CardItem>
                     </a>
                   </div>
@@ -131,8 +144,8 @@ export default function Home() {
 
         <section className="py-20 px-4 md:px-8 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/30 dark:to-charcoal">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              Trusted <FlipWords words={["Prop Firms", "Funding Partners", "Capital Providers", "Trading Firms"]} className="text-light-blue" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
+              <FaBuilding className="mr-3 text-light-blue" /> Trusted <FlipWords words={["Prop Firms", "Funding Partners", "Capital Providers", "Trading Firms"]} className="text-light-blue ml-2" />
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {/* FTMO Prop Firm Card */}
@@ -140,9 +153,9 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
                   >
-                    FTMO
+                    <FaBuilding className="mr-2 text-light-blue" /> FTMO
                   </CardItem>
                   <CardItem
                     as="p"
@@ -166,15 +179,15 @@ export default function Home() {
                       className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <span className="text-paynes-gray mr-2">★★★★☆</span> 4.2/5
+                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★☆</span> 4.2/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold"
+                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
                       >
-                        Compare Plans
+                        <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
                     </Link>
                   </div>
@@ -186,9 +199,9 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
                   >
-                    FXify
+                    <FaBuilding className="mr-2 text-light-blue" /> FXify
                   </CardItem>
                   <CardItem
                     as="p"
@@ -212,15 +225,15 @@ export default function Home() {
                       className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <span className="text-paynes-gray mr-2">★★★★★</span> 4.5/5
+                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★★</span> 4.5/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold"
+                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
                       >
-                        Compare Plans
+                        <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
                     </Link>
                   </div>
@@ -232,9 +245,9 @@ export default function Home() {
                 <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full"
+                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
                   >
-                    AuraFunded
+                    <FaBuilding className="mr-2 text-light-blue" /> AuraFunded
                   </CardItem>
                   <CardItem
                     as="p"
@@ -258,15 +271,15 @@ export default function Home() {
                       className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <span className="text-paynes-gray mr-2">★★★★☆</span> 4.3/5
+                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★☆</span> 4.3/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold"
+                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
                       >
-                        Compare Plans
+                        <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
                     </Link>
                   </div>
@@ -416,52 +429,123 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Trusted by Section */}
+        <section className="py-20 px-4 md:px-8 bg-ghost-white dark:bg-charcoal">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
+              <FaUsers className="mr-3 text-light-blue" /> Trusted by Thousands
+            </h2>
+          </div>
+        </section>
+        
+
         {/* Footer */}
         <footer className="py-10 px-4 bg-charcoal border-t border-light-blue/10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="text-lg font-semibold mb-4 text-ghost-white">brokerConnect</h3>
+                <h3 className="text-lg font-semibold mb-4 text-ghost-white flex items-center">
+                  <FaChartLine className="mr-2 text-light-blue" /> brokerConnect
+                </h3>
                 <p className="text-light-blue text-sm">
                   The premier platform connecting traders with verified professionals.
                 </p>
+                <div className="mt-4 flex space-x-4">
+                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                    <FaTwitter />
+                  </a>
+                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                    <FaLinkedin />
+                  </a>
+                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                    <FaInstagram />
+                  </a>
+                </div>
               </div>
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Quick Links</h3>
                 <ul className="space-y-2 text-light-blue text-sm">
-                  <li><Link href="/brokers" className="hover:text-ghost-white">Find a Broker</Link></li>
-                  <li><Link href="/mentors" className="hover:text-ghost-white">Find a Mentor</Link></li>
-                  <li><Link href="/prop-firms" className="hover:text-ghost-white">Prop Firm Comparison</Link></li>
-                  <li><Link href="/contact" className="hover:text-ghost-white">Report a Scam</Link></li>
+                  <li>
+                    <Link href="/brokers" className="hover:text-ghost-white flex items-center">
+                      <FaChartLine className="mr-2" /> Find a Broker
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/mentors" className="hover:text-ghost-white flex items-center">
+                      <FaUserTie className="mr-2" /> Find a Mentor
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/prop-firms" className="hover:text-ghost-white flex items-center">
+                      <FaBuilding className="mr-2" /> Prop Firm Comparison
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:text-ghost-white flex items-center">
+                      <FaExclamationTriangle className="mr-2" /> Report a Scam
+                    </Link>
+                  </li>
                 </ul>
               </div>
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Resources</h3>
                 <ul className="space-y-2 text-light-blue text-sm">
-                  <li><Link href="/faq" className="hover:text-ghost-white">FAQ</Link></li>
-                  <li><Link href="/about" className="hover:text-ghost-white">About Us</Link></li>
-                  <li><Link href="/brokers" className="hover:text-ghost-white">Broker Verification</Link></li>
-                  <li><Link href="/prop-firms" className="hover:text-ghost-white">Prop Firms</Link></li>
+                  <li>
+                    <Link href="/faq" className="hover:text-ghost-white flex items-center">
+                      <FaQuestionCircle className="mr-2" /> FAQ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/about" className="hover:text-ghost-white flex items-center">
+                      <FaInfoCircle className="mr-2" /> About Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/brokers" className="hover:text-ghost-white flex items-center">
+                      <FaShieldAlt className="mr-2" /> Broker Verification
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/prop-firms" className="hover:text-ghost-white flex items-center">
+                      <FaBuilding className="mr-2" /> Prop Firms
+                    </Link>
+                  </li>
                 </ul>
               </div>
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Connect</h3>
                 <ul className="space-y-2 text-light-blue text-sm">
-                  <li><Link href="/contact" className="hover:text-ghost-white">Contact Us</Link></li>
-                  <li><Link href="#" className="hover:text-ghost-white">Twitter</Link></li>
-                  <li><Link href="#" className="hover:text-ghost-white">Instagram</Link></li>
-                  <li><Link href="#" className="hover:text-ghost-white">Telegram</Link></li>
+                  <li>
+                    <Link href="/contact" className="hover:text-ghost-white flex items-center">
+                      <FaEnvelope className="mr-2" /> Contact Us
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-ghost-white flex items-center">
+                      <FaTwitter className="mr-2" /> Twitter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-ghost-white flex items-center">
+                      <FaInstagram className="mr-2" /> Instagram
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-ghost-white flex items-center">
+                      <FaTelegram className="mr-2" /> Telegram
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
             
             <div className="border-t border-light-blue/10 mt-10 pt-6 text-center text-ghost-white text-sm">
               <p>© 2023 brokerConnect Platform. All rights reserved.</p>
-              <p className="mt-2 text-light-blue">
-                brokerConnect is not a broker or financial advisor. Trading involves risk.
+              <p className="mt-2 text-light-blue flex items-center justify-center">
+                <FaShieldAlt className="mr-2" /> brokerConnect is not a broker or financial advisor. Trading involves risk.
               </p>
             </div>
           </div>

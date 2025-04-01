@@ -463,7 +463,7 @@ export default function Home() {
               </div>
               
               <div className="bg-space-gray/40 p-6 rounded-xl border border-neon-purple/20 hover:shadow-purple-glow transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Comprehensive information hub</h3>
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Comprehensive Information Hub</h3>
                 <p className="text-tech-silver">From funding requirements to mentor-led communities on Discord and WhatsApp, we provide all the details you need in one place. No more second-guessing—everything you need to know is at your fingertips.</p>
               </div>
               
@@ -473,7 +473,7 @@ export default function Home() {
               </div>
               
               <div className="bg-space-gray/40 p-6 rounded-xl border border-neon-pink/20 hover:shadow-pink-glow transition-all duration-300">
-                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Tailored trading support</h3>
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Tailored Trading Support</h3>
                 <p className="text-tech-silver">Whether you're a beginner or a seasoned trader, our website is designed to guide you towards services that fit your specific trading style, goals, and level of experience. We help you find the perfect partners to elevate your trading journey.</p>
               </div>
             </div>

@@ -332,15 +332,15 @@ export default function PropFirmsPage() {
             </CardContainer>
           </StaggeredList>
           
-          <div className="mt-16 bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center">
-            <h2 className="text-2xl font-bold mb-4 text-charcoal dark:text-ghost-white">Looking for a Different Prop Firm?</h2>
-            <p className="text-paynes-gray dark:text-light-blue mb-6 max-w-3xl mx-auto">
+          <div className="mt-16 bg-space-gray/30 p-8 rounded-xl border border-cyber-blue/20 text-center shadow-blue-glow">
+            <h2 className="text-2xl font-bold mb-4 text-ghost-white">Looking for a Different Prop Firm?</h2>
+            <p className="text-tech-silver mb-6 max-w-3xl mx-auto">
               We're continuously adding new prop firms to our platform. If you don't see the firm you're looking for, or want to suggest a new addition, please let us know.
             </p>
             <Link href="/contact">
               <Button 
                 containerClassName="w-auto h-14"
-                className="bg-light-blue hover:bg-paynes-gray text-charcoal font-medium px-8"
+                className="bg-cyber-blue hover:bg-deep-purple text-ghost-white font-medium px-8 shadow-blue-glow"
               >
                 Contact Us
               </Button>

@@ -20,6 +20,7 @@ export function Button({
   className,
   icon,
   iconPosition = "left",
+  variant = "default",
   ...otherProps
 }: {
   borderRadius?: string;
@@ -31,6 +32,7 @@ export function Button({
   className?: string;
   icon?: React.ReactNode;
   iconPosition?: "left" | "right";
+  variant?: "default" | "outline";
   [key: string]: any;
 }) {
   return (
@@ -51,7 +53,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-20 w-20 bg-[radial-gradient(#b8dbd9_40%,transparent_60%)] opacity-[0.8]",
+              "h-20 w-20 bg-[radial-gradient(#5c83f9_40%,transparent_60%)] opacity-[0.8]",
               borderClassName,
             )}
           />
@@ -60,7 +62,8 @@ export function Button({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center border border-light-blue/30 bg-charcoal/[0.8] text-sm text-ghost-white antialiased backdrop-blur-xl",
+          "relative flex h-full w-full items-center justify-center border border-cyber-blue/30 bg-neo-black/[0.8] text-sm text-ghost-white antialiased backdrop-blur-xl",
+          variant === "outline" ? "bg-transparent" : "",
           className,
         )}
         style={{
@@ -115,7 +118,7 @@ export function ButtonIcon({
         <MovingBorder duration={duration} rx="50%" ry="50%">
           <div
             className={cn(
-              "h-20 w-20 bg-[radial-gradient(#b8dbd9_40%,transparent_60%)] opacity-[0.8]",
+              "h-20 w-20 bg-[radial-gradient(#5c83f9_40%,transparent_60%)] opacity-[0.8]",
               borderClassName,
             )}
           />
@@ -124,7 +127,7 @@ export function ButtonIcon({
 
       <div
         className={cn(
-          "relative flex h-full w-full items-center justify-center rounded-full border border-light-blue/30 bg-charcoal/[0.8] text-lg text-ghost-white antialiased backdrop-blur-xl",
+          "relative flex h-full w-full items-center justify-center rounded-full border border-cyber-blue/30 bg-neo-black/[0.8] text-lg text-ghost-white antialiased backdrop-blur-xl",
           className,
         )}
       >

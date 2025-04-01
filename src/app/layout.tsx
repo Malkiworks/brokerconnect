@@ -19,9 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} relative bg-neutral-950 text-neutral-300 overflow-x-hidden min-h-screen`}>
-        <div className="fixed inset-0 z-[-1] overflow-hidden">
-          <BackgroundBeams />
+      <body className={`${inter.className} relative bg-neutral-950 text-neutral-300 overflow-x-hidden min-h-screen w-screen`}>
+        <div className="fixed inset-0 z-[-1] w-full h-full overflow-hidden">
+          <BackgroundBeams className="w-full h-full" />
         </div>
         <div className="relative z-10">
           {children}

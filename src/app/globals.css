@@ -102,6 +102,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scroll */
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+/* Fix for mobile background sizing */
+@media (max-width: 768px) {
+  .fixed.inset-0.z-\[-1\] {
+    height: 100vh !important;
+    width: 100vw !important;
+    overflow: hidden !important;
+  }
+  
+  svg.pointer-events-none.absolute.z-0 {
+    min-height: 100vh !important;
+    min-width: 100vw !important;
+    transform-origin: center center;
+    object-fit: cover;
+    height: auto !important;
+    width: auto !important;
+  }
 }
 
 /* Animation utility classes */

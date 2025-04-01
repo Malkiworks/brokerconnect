@@ -60,15 +60,16 @@ export const BackgroundBeams = React.memo(
     return (
       <div
         className={cn(
-          "absolute inset-0 flex h-full w-full items-center justify-center",
+          "absolute inset-0 flex h-full w-full items-center justify-center overflow-hidden",
           className,
         )}
       >
         <svg
-          className="pointer-events-none absolute z-0 h-full w-full"
+          className="pointer-events-none absolute z-0 min-h-full min-w-full object-cover"
           width="100%"
           height="100%"
-          viewBox="0 0 696 316"
+          preserveAspectRatio="xMidYMid slice"
+          viewBox="-200 -400 800 800"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -84,9 +85,9 @@ export const BackgroundBeams = React.memo(
               key={`path-` + index}
               d={path}
               stroke={`url(#linearGradient-${index})`}
-              strokeOpacity="0.8"
-              strokeWidth="1"
-            ></motion.path>
+              strokeOpacity="1"
+              strokeWidth="1.5">
+            </motion.path>
           ))}
           <defs>
             {paths.map((path, index) => (
@@ -103,18 +104,18 @@ export const BackgroundBeams = React.memo(
                   x1: ["0%", "100%"],
                   x2: ["0%", "95%"],
                   y1: ["0%", "100%"],
-                  y2: ["0%", `${93 + Math.random() * 8}%`],
+                  y2: ["0%", `${85 + Math.random() * 15}%`],
                 }}
                 transition={{
-                  duration: Math.random() * 10 + 10,
+                  duration: Math.random() * 8 + 8,
                   ease: "easeInOut",
                   repeat: Infinity,
-                  delay: Math.random() * 10,
+                  delay: Math.random() * 5,
                 }}
               >
                 <stop stopColor="#d4d4d4" stopOpacity="0"></stop>
-                <stop stopColor="#d4d4d4"></stop>
-                <stop offset="32.5%" stopColor="#e5e5e5"></stop>
+                <stop stopColor="#e8e8e8"></stop>
+                <stop offset="32.5%" stopColor="#ffffff"></stop>
                 <stop offset="100%" stopColor="#ffffff" stopOpacity="0"></stop>
               </motion.linearGradient>
             ))}
@@ -125,11 +126,11 @@ export const BackgroundBeams = React.memo(
               cy="0"
               r="1"
               gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
+              gradientTransform="translate(352 34) rotate(90) scale(700 1800)"
             >
-              <stop offset="0.0666667" stopColor="#d4d4d4"></stop>
-              <stop offset="0.243243" stopColor="#d4d4d4"></stop>
-              <stop offset="0.43594" stopColor="white" stopOpacity="0"></stop>
+              <stop offset="0.0333333" stopColor="#d4d4d4"></stop>
+              <stop offset="0.3" stopColor="#d4d4d4"></stop>
+              <stop offset="0.6" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
           </defs>
         </svg>

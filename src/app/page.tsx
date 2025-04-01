@@ -30,7 +30,7 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Button
                     containerClassName="w-48 h-12"
-                    className="bg-electric-indigo hover:bg-deep-purple border-none text-ghost-white font-medium shadow-neon-glow"
+                    className="bg-electric-indigo hover:bg-deep-purple border border-cyber-blue text-ghost-white font-medium shadow-neon-glow"
                   >
                     <Link href="/brokers" className="flex items-center">
                       <FaSearch className="mr-2" /> Find a Broker
@@ -276,7 +276,156 @@ export default function Home() {
             <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white flex items-center justify-center">
               <FaBuilding className="mr-3 text-neon-purple" /> Top <FlipWords words={["Brokers", "Partners", "Providers"]} className="text-neon-purple ml-2" />
             </h2>
-            {/* Rest of the content would go here */}
+            <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-10" staggerDelay={0.1}>
+              {/* XM Broker Card */}
+              <CardContainer className="inter-var">
+                <CardBody className="bg-midnight relative group/card hover:shadow-neon-glow border-electric-indigo/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
+                  >
+                    <FaChartLine className="mr-2 text-electric-indigo" /> XM
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
+                  >
+                    Global broker with over 1,000 instruments and MT4/MT5 platforms.
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <Image
+                      src="/brokers/xm.jpg"
+                      height="225"
+                      width="400"
+                      className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl mx-auto"
+                      alt="XM"
+                    />
+                  </CardItem>
+                  <div className="flex justify-between items-center mt-4">
+                    <CardItem
+                      translateZ={40}
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
+                    >
+                      <div className="flex items-center gap-1">
+                        <FaStar className="text-electric-indigo mr-1" /> <span className="text-tech-silver mr-2">★★★★☆</span> 4.3/5
+                      </div>
+                    </CardItem>
+                    <Link href="/brokers">
+                      <CardItem
+                        translateZ={40}
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
+                      >
+                        <FaChartBar className="mr-1" /> View Details
+                      </CardItem>
+                    </Link>
+                  </div>
+                </CardBody>
+              </CardContainer>
+
+              {/* EBC Financial Group Broker Card */}
+              <CardContainer className="inter-var">
+                <CardBody className="bg-midnight relative group/card hover:shadow-purple-glow border-neon-purple/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
+                  >
+                    <FaChartLine className="mr-2 text-neon-purple" /> EBC Financial Group
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
+                  >
+                    Regulated broker with tight spreads and fast execution.
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <Image
+                      src="/brokers/ebc.jpg"
+                      height="225"
+                      width="400"
+                      className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl mx-auto"
+                      alt="EBC Financial Group"
+                    />
+                  </CardItem>
+                  <div className="flex justify-between items-center mt-4">
+                    <CardItem
+                      translateZ={40}
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
+                    >
+                      <div className="flex items-center gap-1">
+                        <FaStar className="text-neon-purple mr-1" /> <span className="text-tech-silver mr-2">★★★★★</span> 4.7/5
+                      </div>
+                    </CardItem>
+                    <Link href="/brokers">
+                      <CardItem
+                        translateZ={40}
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
+                      >
+                        <FaChartBar className="mr-1" /> View Details
+                      </CardItem>
+                    </Link>
+                  </div>
+                </CardBody>
+              </CardContainer>
+
+              {/* Eightcap Broker Card */}
+              <CardContainer className="inter-var">
+                <CardBody className="bg-midnight relative group/card hover:shadow-pink-glow border-neon-pink/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
+                  >
+                    <FaChartLine className="mr-2 text-neon-pink" /> Eightcap
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
+                  >
+                    Award-winning forex and CFD trading provider with competitive conditions.
+                  </CardItem>
+                  <CardItem translateZ="100" className="w-full mt-4">
+                    <Image
+                      src="/brokers/eightcap.jpg"
+                      height="225"
+                      width="400"
+                      className="h-40 w-full object-contain rounded-xl group-hover/card:shadow-xl mx-auto"
+                      alt="Eightcap"
+                    />
+                  </CardItem>
+                  <div className="flex justify-between items-center mt-4">
+                    <CardItem
+                      translateZ={40}
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
+                    >
+                      <div className="flex items-center gap-1">
+                        <FaStar className="text-neon-pink mr-1" /> <span className="text-tech-silver mr-2">★★★★☆</span> 4.4/5
+                      </div>
+                    </CardItem>
+                    <Link href="/brokers">
+                      <CardItem
+                        translateZ={40}
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
+                      >
+                        <FaChartBar className="mr-1" /> View Details
+                      </CardItem>
+                    </Link>
+                  </div>
+                </CardBody>
+              </CardContainer>
+            </StaggeredList>
+            
+            <div className="text-center mt-16">
+              <Link href="/brokers">
+                <Button
+                  className="bg-neon-purple hover:bg-deep-purple text-ghost-white shadow-purple-glow"
+                  icon={<FaRocket className="mr-2" />}
+                >
+                  View All Brokers
+                </Button>
+              </Link>
+            </div>
           </div>
         </AnimatedSection>
 

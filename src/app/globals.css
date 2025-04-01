@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --black: #000000;
-  --charcoal: #2f4550;
-  --paynes-gray: #586f7c;
-  --light-blue: #b8dbd9;
-  --ghost-white: #f4f4f9;
+  /* Core Colors */
+  --neutral-950: #0a0a0a;
+  --neutral-900: #171717;
+  --neutral-800: #262626;
+  --neutral-700: #404040;
+  --neutral-600: #525252;
+  --neutral-500: #737373;
+  --neutral-400: #a3a3a3;
+  --neutral-300: #d4d4d4;
+  --neutral-200: #e5e5e5;
+  --neutral-100: #f5f5f5;
+  --white: #ffffff;
   
-  --background: var(--ghost-white);
-  --foreground: var(--charcoal);
+  /* Gradient Colors */
+  --white-transparent: rgba(255, 255, 255, 0.5);
+  
+  --background: var(--neutral-100);
+  --foreground: var(--neutral-950);
   
   /* Add smooth scrolling by default */
   scroll-behavior: smooth;
@@ -25,22 +35,22 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(88, 111, 124, 0.1); /* paynes-gray with opacity */
+  background: rgba(115, 115, 115, 0.1); /* neutral-500 with opacity */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--light-blue);
+  background: var(--neutral-300);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(184, 219, 217, 0.8); /* light-blue with opacity */
+  background: rgba(212, 212, 212, 0.8); /* neutral-300 with opacity */
 }
 
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--light-blue) rgba(88, 111, 124, 0.1);
+  scrollbar-color: var(--neutral-300) rgba(115, 115, 115, 0.1);
 }
 
 .scrollbar-thin {
@@ -48,11 +58,11 @@ html {
 }
 
 .scrollbar-thumb-light-blue {
-  scrollbar-color: var(--light-blue) transparent;
+  scrollbar-color: var(--neutral-300) transparent;
 }
 
 .scrollbar-track-paynes-gray\/20 {
-  scrollbar-color: var(--light-blue) rgba(88, 111, 124, 0.2);
+  scrollbar-color: var(--neutral-300) rgba(115, 115, 115, 0.2);
 }
 
 /* Disable smooth scrolling for users who prefer reduced motion */
@@ -82,8 +92,8 @@ html {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--charcoal);
-    --foreground: var(--ghost-white);
+    --background: var(--neutral-950);
+    --foreground: var(--neutral-200);
   }
 }
 
@@ -146,44 +156,161 @@ body {
 }
 
 /* Add custom utility classes for the new color scheme */
+.bg-neutral-950 {
+  background-color: var(--neutral-950);
+}
+
+.bg-neutral-900 {
+  background-color: var(--neutral-900);
+}
+
+.bg-neutral-800 {
+  background-color: var(--neutral-800);
+}
+
+.bg-neutral-700 {
+  background-color: var(--neutral-700);
+}
+
+.bg-neutral-600 {
+  background-color: var(--neutral-600);
+}
+
+.bg-neutral-500 {
+  background-color: var(--neutral-500);
+}
+
+.bg-neutral-400 {
+  background-color: var(--neutral-400);
+}
+
+.bg-neutral-300 {
+  background-color: var(--neutral-300);
+}
+
+.bg-neutral-200 {
+  background-color: var(--neutral-200);
+}
+
+.bg-neutral-100 {
+  background-color: var(--neutral-100);
+}
+
+.bg-cyan {
+  background-color: var(--neutral-300);
+}
+
+.bg-purple {
+  background-color: var(--neutral-400);
+}
+
+.bg-magenta {
+  background-color: var(--neutral-500);
+}
+
+.text-neutral-950 {
+  color: var(--neutral-950);
+}
+
+.text-neutral-900 {
+  color: var(--neutral-900);
+}
+
+.text-neutral-800 {
+  color: var(--neutral-800);
+}
+
+.text-neutral-700 {
+  color: var(--neutral-700);
+}
+
+.text-neutral-600 {
+  color: var(--neutral-600);
+}
+
+.text-neutral-500 {
+  color: var(--neutral-500);
+}
+
+.text-neutral-400 {
+  color: var(--neutral-400);
+}
+
+.text-neutral-300 {
+  color: var(--neutral-300);
+}
+
+.text-neutral-200 {
+  color: var(--neutral-200);
+}
+
+.text-neutral-100 {
+  color: var(--neutral-100);
+}
+
+.text-cyan {
+  color: var(--neutral-300);
+}
+
+.text-purple {
+  color: var(--neutral-400);
+}
+
+.text-magenta {
+  color: var(--neutral-500);
+}
+
+.border-cyan {
+  border-color: var(--neutral-300);
+}
+
+.border-purple {
+  border-color: var(--neutral-400);
+}
+
+.border-magenta {
+  border-color: var(--neutral-500);
+}
+
+/* Keep the existing classes for backward compatibility */
 .bg-charcoal {
-  background-color: var(--charcoal);
+  background-color: var(--neutral-800);
 }
 
 .bg-paynes-gray {
-  background-color: var(--paynes-gray);
+  background-color: var(--neutral-700);
 }
 
 .bg-light-blue {
-  background-color: var(--light-blue);
+  background-color: var(--neutral-300);
 }
 
 .bg-ghost-white {
-  background-color: var(--ghost-white);
+  background-color: var(--neutral-100);
 }
 
 .text-charcoal {
-  color: var(--charcoal);
+  color: var(--neutral-800);
 }
 
 .text-paynes-gray {
-  color: var(--paynes-gray);
+  color: var(--neutral-700);
 }
 
 .text-light-blue {
-  color: var(--light-blue);
+  color: var(--neutral-300);
 }
 
 .text-ghost-white {
-  color: var(--ghost-white);
+  color: var(--neutral-100);
 }
 
 .border-light-blue {
-  border-color: var(--light-blue);
+  border-color: var(--neutral-300);
 }
 
 .border-paynes-gray {
-  border-color: var(--paynes-gray);
+  border-color: var(--neutral-700);
 }
 
 /* Header scroll effect styles */
@@ -192,6 +319,11 @@ header {
 }
 
 header.scrolled {
-  background-color: rgba(47, 69, 80, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(23, 23, 23, 0.95); /* neutral-900 with opacity */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Radial gradient background */
+.bg-radial-gradient {
+  background: radial-gradient(circle, var(--white-transparent), var(--neutral-300));
 }

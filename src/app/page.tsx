@@ -15,22 +15,22 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-16 bg-ghost-white dark:bg-charcoal">
+      <main className="min-h-screen pt-16 bg-neo-black">
         {/* Hero Section */}
         <section className="w-full">
           <ContainerScroll
             titleComponent={
               <div className="max-w-3xl mx-auto text-center">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-charcoal dark:text-ghost-white">
-                  Connect securely with the <FlipWords words={["trading", "broker", "prop firm", "mentor"]} className="text-light-blue" /> industry 
+                <h1 className="text-4xl md:text-6xl font-bold mb-4 text-ghost-white">
+                  Connect securely with the <FlipWords words={["trading", "broker", "prop firm", "mentor"]} className="text-cyber-blue" /> industry 
                 </h1>
-                <p className="text-paynes-gray dark:text-light-blue text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                <p className="text-tech-silver text-lg md:text-xl max-w-2xl mx-auto mb-8">
                   Find brokers, prop firms and mentors - all under one roof
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Button
                     containerClassName="w-48 h-12"
-                    className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium"
+                    className="bg-electric-indigo hover:bg-deep-purple border-none text-ghost-white font-medium shadow-neon-glow"
                   >
                     <Link href="/brokers" className="flex items-center">
                       <FaSearch className="mr-2" /> Find a Broker
@@ -38,7 +38,7 @@ export default function Home() {
                   </Button>
                   <Button
                     containerClassName="w-48 h-12"
-                    className="bg-ghost-white hover:bg-light-blue/50 border border-light-blue text-charcoal font-medium"
+                    className="bg-midnight hover:bg-electric-indigo/50 border border-cyber-blue text-ghost-white font-medium"
                   >
                     <Link href="/mentors" className="flex items-center">
                       <FaUserTie className="mr-2" /> Browse Mentors
@@ -49,54 +49,54 @@ export default function Home() {
               </div>
             }
           >
-            <div className="relative w-full h-full bg-ghost-white dark:bg-charcoal flex flex-col items-center justify-start overflow-y-auto">
-              <div className="absolute inset-0 bg-gradient-to-r from-light-blue/20 to-paynes-gray/20 opacity-50" />
+            <div className="relative w-full h-full bg-midnight flex flex-col items-center justify-start overflow-y-auto">
+              <div className="absolute inset-0 bg-dark-gradient opacity-70" />
               
               {/* Main Services Section */}
-              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full mb-8">
-                <h2 className="text-2xl md:text-3xl text-center mb-8 text-charcoal dark:text-ghost-white flex items-center justify-center">
-                  <FaHandshake className="mr-2 text-light-blue" /> Our Services
+              <div className="p-6 md:p-8 bg-space-gray/30 backdrop-blur-sm rounded-2xl border border-cyber-blue/30 max-w-5xl mx-auto w-full mb-8 shadow-neon-glow">
+                <h2 className="text-2xl md:text-3xl text-center mb-8 text-ghost-white flex items-center justify-center">
+                  <FaHandshake className="mr-2 text-cyber-blue" /> Our Services
                 </h2>
                 <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-6" staggerDelay={0.1}>
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
-                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                  <div className="bg-midnight/60 p-6 rounded-lg border border-electric-indigo/40 hover:shadow-neon-glow transition-all duration-300 hover:border-cyber-blue">
+                    <div className="text-cyber-blue text-2xl mb-3 flex justify-center">
                       <FaGraduationCap />
                     </div>
-                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Expert Mentor</h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Connect with our premium verified trading mentor - Capital Bulls by Rashied Chauke - specializing in US30 trading</p>
+                    <h3 className="text-ghost-white mb-3 text-lg font-semibold text-center">Expert Mentor</h3>
+                    <p className="text-tech-silver text-sm text-center">Connect with our premium verified trading mentor - Capital Bulls by Rashied Chauke - specializing in US30 trading</p>
                     <div className="mt-4 flex justify-center">
                       <Link href="/mentors">
-                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                        <Button variant="outline" className="text-xs border-cyber-blue/50 hover:bg-cyber-blue/20 text-ghost-white">
                           View Mentor
                         </Button>
                       </Link>
                     </div>
                   </div>
                   
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
-                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                  <div className="bg-midnight/60 p-6 rounded-lg border border-neon-purple/40 hover:shadow-purple-glow transition-all duration-300 hover:border-neon-purple">
+                    <div className="text-neon-purple text-2xl mb-3 flex justify-center">
                       <FaChartLine />
                     </div>
-                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Verified Brokers</h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Access our handpicked selection of 3+ trusted brokers including XM, EBC Financial Group, and Eightcap</p>
+                    <h3 className="text-ghost-white mb-3 text-lg font-semibold text-center">Verified Brokers</h3>
+                    <p className="text-tech-silver text-sm text-center">Access our handpicked selection of 3+ trusted brokers including XM, EBC Financial Group, and Eightcap</p>
                     <div className="mt-4 flex justify-center">
                       <Link href="/brokers">
-                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                        <Button variant="outline" className="text-xs border-neon-purple/50 hover:bg-neon-purple/20 text-ghost-white">
                           Find Brokers
                         </Button>
                       </Link>
                     </div>
                   </div>
                   
-                  <div className="bg-ghost-white/60 dark:bg-paynes-gray/60 p-6 rounded-lg border border-light-blue/30 hover:shadow-lg transition-all duration-300 hover:border-light-blue">
-                    <div className="text-light-blue text-2xl mb-3 flex justify-center">
+                  <div className="bg-midnight/60 p-6 rounded-lg border border-neon-pink/40 hover:shadow-pink-glow transition-all duration-300 hover:border-neon-pink">
+                    <div className="text-neon-pink text-2xl mb-3 flex justify-center">
                       <FaBuilding />
                     </div>
-                    <h3 className="text-charcoal dark:text-ghost-white mb-3 text-lg font-semibold text-center">Prop Firms</h3>
-                    <p className="text-paynes-gray dark:text-light-blue text-sm text-center">Get funded through our 3 verified prop firms - FTMO, FXify, and AuraFunded - with capital from $100K to $500K</p>
+                    <h3 className="text-ghost-white mb-3 text-lg font-semibold text-center">Prop Firms</h3>
+                    <p className="text-tech-silver text-sm text-center">Get funded through our 3 verified prop firms - FTMO, FXify, and AuraFunded - with capital from $100K to $500K</p>
                     <div className="mt-4 flex justify-center">
                       <Link href="/prop-firms">
-                        <Button variant="outline" className="text-xs border-light-blue/50 hover:bg-light-blue/20 text-charcoal dark:text-ghost-white">
+                        <Button variant="outline" className="text-xs border-neon-pink/50 hover:bg-neon-pink/20 text-ghost-white">
                           Explore Firms
                         </Button>
                       </Link>
@@ -106,67 +106,67 @@ export default function Home() {
               </div>
               
               {/* Why Choose Us */}
-              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full mb-8">
-                <h2 className="text-2xl text-center mb-6 text-charcoal dark:text-ghost-white flex items-center justify-center">
-                  <FaAward className="mr-2 text-light-blue" /> Why Choose BrokerConnect
+              <div className="p-6 md:p-8 bg-space-gray/30 backdrop-blur-sm rounded-2xl border border-electric-indigo/30 max-w-5xl mx-auto w-full mb-8">
+                <h2 className="text-2xl text-center mb-6 text-ghost-white flex items-center justify-center">
+                  <FaAward className="mr-2 text-electric-indigo" /> Why Choose BrokerConnect
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex items-start space-x-3">
-                    <div className="text-light-blue mt-1"><FaCheck /></div>
+                    <div className="text-cyber-teal mt-1"><FaCheck /></div>
                     <div>
-                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Quality Over Quantity</h3>
-                      <p className="text-paynes-gray dark:text-light-blue text-sm">We focus on a small, carefully selected group of top-tier brokers, props, and mentors rather than an overwhelming list</p>
+                      <h3 className="text-ghost-white text-lg font-medium">Quality Over Quantity</h3>
+                      <p className="text-tech-silver text-sm">We focus on a small, carefully selected group of top-tier brokers, props, and mentors rather than an overwhelming list</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="text-light-blue mt-1"><FaShieldAlt /></div>
+                    <div className="text-cyber-teal mt-1"><FaShieldAlt /></div>
                     <div>
-                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Personally Verified</h3>
-                      <p className="text-paynes-gray dark:text-light-blue text-sm">Each partner on our platform has been personally vetted to ensure maximum reliability and transparency</p>
+                      <h3 className="text-ghost-white text-lg font-medium">Personally Verified</h3>
+                      <p className="text-tech-silver text-sm">Each partner on our platform has been personally vetted to ensure maximum reliability and transparency</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="text-light-blue mt-1"><FaLightbulb /></div>
+                    <div className="text-cyber-teal mt-1"><FaLightbulb /></div>
                     <div>
-                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Direct Connections</h3>
-                      <p className="text-paynes-gray dark:text-light-blue text-sm">Get immediate access to Capital Bulls mentorship and direct links to top prop firms without the confusion</p>
+                      <h3 className="text-ghost-white text-lg font-medium">Direct Connections</h3>
+                      <p className="text-tech-silver text-sm">Get immediate access to Capital Bulls mentorship and direct links to top prop firms without the confusion</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start space-x-3">
-                    <div className="text-light-blue mt-1"><FaUsers /></div>
+                    <div className="text-cyber-teal mt-1"><FaUsers /></div>
                     <div>
-                      <h3 className="text-charcoal dark:text-ghost-white text-lg font-medium">Growing Community</h3>
-                      <p className="text-paynes-gray dark:text-light-blue text-sm">Join our expanding network of traders who benefit from our curated partnerships and reliable recommendations</p>
+                      <h3 className="text-ghost-white text-lg font-medium">Growing Community</h3>
+                      <p className="text-tech-silver text-sm">Join our expanding network of traders who benefit from our curated partnerships and reliable recommendations</p>
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Stats Section */}
-              <div className="p-6 md:p-8 bg-ghost-white/50 dark:bg-charcoal/50 backdrop-blur-sm rounded-2xl border border-light-blue/30 max-w-5xl mx-auto w-full">
-                <h2 className="text-xl text-center mb-8 text-charcoal dark:text-ghost-white">Trusted By Traders Worldwide</h2>
+              <div className="p-6 md:p-8 bg-space-gray/30 backdrop-blur-sm rounded-2xl border border-cyber-blue/30 max-w-5xl mx-auto w-full">
+                <h2 className="text-xl text-center mb-8 text-ghost-white">Trusted By Traders Worldwide</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
-                    <div className="text-3xl font-bold text-light-blue mb-1">3+</div>
-                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Verified Brokers</div>
+                  <div className="p-4 rounded-lg bg-midnight border border-cyber-blue/30">
+                    <div className="text-3xl font-bold text-cyber-blue mb-1">3+</div>
+                    <div className="text-sm text-ghost-white">Verified Brokers</div>
                   </div>
                   
-                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
-                    <div className="text-3xl font-bold text-light-blue mb-1">3</div>
-                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Prop Firms</div>
+                  <div className="p-4 rounded-lg bg-midnight border border-neon-purple/30">
+                    <div className="text-3xl font-bold text-neon-purple mb-1">3</div>
+                    <div className="text-sm text-ghost-white">Prop Firms</div>
                   </div>
                   
-                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
-                    <div className="text-3xl font-bold text-light-blue mb-1">1</div>
-                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Expert Mentor</div>
+                  <div className="p-4 rounded-lg bg-midnight border border-electric-indigo/30">
+                    <div className="text-3xl font-bold text-electric-indigo mb-1">1</div>
+                    <div className="text-sm text-ghost-white">Expert Mentor</div>
                   </div>
                   
-                  <div className="p-4 rounded-lg bg-light-blue/10 border border-light-blue/20">
-                    <div className="text-3xl font-bold text-light-blue mb-1">100+</div>
-                    <div className="text-sm text-paynes-gray dark:text-ghost-white">Monthly Users</div>
+                  <div className="p-4 rounded-lg bg-midnight border border-neon-pink/30">
+                    <div className="text-3xl font-bold text-neon-pink mb-1">100+</div>
+                    <div className="text-sm text-ghost-white">Monthly Users</div>
                   </div>
                 </div>
                 
@@ -174,7 +174,7 @@ export default function Home() {
                   <Link href="/about">
                     <Button
                       variant="outline"
-                      className="text-sm border-light-blue text-charcoal dark:text-ghost-white hover:bg-light-blue/20"
+                      className="text-sm border-electric-indigo text-ghost-white hover:bg-electric-indigo/20"
                       icon={<FaInfoCircle className="mr-2" />}
                     >
                       About Us
@@ -182,7 +182,7 @@ export default function Home() {
                   </Link>
                   <Link href="/contact">
                     <Button
-                      className="text-sm bg-light-blue hover:bg-paynes-gray text-charcoal"
+                      className="text-sm bg-cyber-blue hover:bg-electric-indigo text-neo-black font-semibold shadow-neon-glow"
                       icon={<FaEnvelope className="mr-2" />}
                     >
                       Contact Us
@@ -198,25 +198,25 @@ export default function Home() {
         </section>
 
         {/* Broker/Prop Firm Showcase Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/30">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-gradient-to-b from-neo-black to-midnight">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
-              <FaUserTie className="mr-3 text-light-blue" /> Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-light-blue ml-2" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white flex items-center justify-center">
+              <FaUserTie className="mr-3 text-cyber-blue" /> Find a <FlipWords words={["mentor", "guide", "teacher", "expert"]} className="text-cyber-blue ml-2" />
             </h2>
             <div className="flex justify-center items-center">
               {/* Mentor Card */}
               <CardContainer className="inter-var max-w-md w-full">
-                <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                <CardBody className="bg-midnight relative group/card hover:shadow-neon-glow border-cyber-blue/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
                   >
-                    <FaUserTie className="mr-2 text-light-blue" /> Capital Bulls - Rashied Chauke
+                    <FaUserTie className="mr-2 text-cyber-blue" /> Capital Bulls - Rashied Chauke
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-paynes-gray text-sm max-w-sm mt-2 dark:text-light-blue"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
                   >
                     Premium US30 trading and educational community.
                   </CardItem>
@@ -232,52 +232,74 @@ export default function Home() {
                   <div className="flex justify-between items-center mt-4">
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★★</span> 4.7/5
+                        <FaStar className="text-cyber-blue mr-1" /> <span className="text-tech-silver mr-2">★★★★★</span> 4.7/5
                       </div>
                     </CardItem>
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-light-blue text-xs font-bold flex items-center"
+                      className="px-4 py-2 rounded-xl text-cyber-blue text-xs font-bold flex items-center"
                     >
                       <FaMoneyBillWave className="mr-1" /> R1250/week
                     </CardItem>
                     <a href="https://tradewithcapitalbulls.com" target="_blank" rel="noopener noreferrer">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-light-blue text-charcoal text-xs font-bold flex items-center"
+                        className="px-4 py-2 rounded-xl bg-cyber-blue text-neo-black text-xs font-bold flex items-center"
                       >
-                        <FaGlobe className="mr-1" /> Visit Website
+                        Visit Site
                       </CardItem>
                     </a>
                   </div>
                 </CardBody>
               </CardContainer>
             </div>
+            
+            <div className="text-center mt-16">
+              <Link href="/mentors">
+                <Button
+                  className="bg-electric-indigo hover:bg-deep-purple text-ghost-white shadow-neon-glow"
+                  icon={<FaRocket className="mr-2" />}
+                >
+                  View All Mentors
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </AnimatedSection>
+        
+        {/* Broker Cards Section */}
+        <AnimatedSection animation="fade" className="py-20 px-4 md:px-8 bg-neo-black">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white flex items-center justify-center">
+              <FaBuilding className="mr-3 text-neon-purple" /> Top <FlipWords words={["Brokers", "Partners", "Providers"]} className="text-neon-purple ml-2" />
+            </h2>
+            {/* Rest of the content would go here */}
           </div>
         </AnimatedSection>
 
-        <AnimatedSection animation="slide" direction="up" delay={0.1} className="py-20 px-4 md:px-8 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/30 dark:to-charcoal">
+        {/* Prop Firms Section */}
+        <AnimatedSection animation="slide" direction="up" delay={0.1} className="py-20 px-4 md:px-8 bg-gradient-to-b from-midnight to-neo-black">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
-              <FaBuilding className="mr-3 text-light-blue" /> Trusted <FlipWords words={["Prop Firms", "Funding Partners", "Capital Providers", "Trading Firms"]} className="text-light-blue ml-2" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white flex items-center justify-center">
+              <FaBuilding className="mr-3 text-neon-pink" /> Trusted <FlipWords words={["Prop Firms", "Funding Partners", "Capital Providers", "Trading Firms"]} className="text-neon-pink ml-2" />
             </h2>
             <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-10" staggerDelay={0.1}>
               {/* FTMO Prop Firm Card */}
               <CardContainer className="inter-var">
-                <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                <CardBody className="bg-midnight relative group/card hover:shadow-neon-glow border-electric-indigo/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
                   >
-                    <FaBuilding className="mr-2 text-light-blue" /> FTMO
+                    <FaBuilding className="mr-2 text-electric-indigo" /> FTMO
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-paynes-gray text-sm max-w-sm mt-2 dark:text-light-blue"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
                   >
                     Get funded up to $200,000 with a 90% profit split.
                   </CardItem>
@@ -293,16 +315,16 @@ export default function Home() {
                   <div className="flex justify-between items-center mt-4">
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★☆</span> 4.2/5
+                        <FaStar className="text-electric-indigo mr-1" /> <span className="text-tech-silver mr-2">★★★★☆</span> 4.2/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
                       >
                         <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
@@ -313,17 +335,17 @@ export default function Home() {
 
               {/* FXify Prop Firm Card */}
               <CardContainer className="inter-var">
-                <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                <CardBody className="bg-midnight relative group/card hover:shadow-purple-glow border-neon-purple/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
                   >
-                    <FaBuilding className="mr-2 text-light-blue" /> FXify
+                    <FaBuilding className="mr-2 text-neon-purple" /> FXify
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-paynes-gray text-sm max-w-sm mt-2 dark:text-light-blue"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
                   >
                     Instant funding up to $400,000 with a 90% profit split.
                   </CardItem>
@@ -339,16 +361,16 @@ export default function Home() {
                   <div className="flex justify-between items-center mt-4">
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★★</span> 4.5/5
+                        <FaStar className="text-neon-purple mr-1" /> <span className="text-tech-silver mr-2">★★★★★</span> 4.5/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
                       >
                         <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
@@ -359,17 +381,17 @@ export default function Home() {
 
               {/* AuraTraded Prop Firm Card */}
               <CardContainer className="inter-var">
-                <CardBody className="bg-ghost-white dark:bg-charcoal relative group/card dark:hover:shadow-2xl dark:hover:shadow-light-blue/[0.1] dark:border-light-blue/[0.2] border-paynes-gray/[0.1] w-auto sm:w-full h-auto rounded-xl p-6 border">
+                <CardBody className="bg-midnight relative group/card hover:shadow-pink-glow border-neon-pink/[0.2] w-auto sm:w-full h-auto rounded-xl p-6 border">
                   <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-charcoal dark:text-ghost-white w-full flex items-center"
+                    className="text-xl font-bold text-ghost-white w-full flex items-center"
                   >
-                    <FaBuilding className="mr-2 text-light-blue" /> AuraFunded
+                    <FaBuilding className="mr-2 text-neon-pink" /> AuraFunded
                   </CardItem>
                   <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-paynes-gray text-sm max-w-sm mt-2 dark:text-light-blue"
+                    className="text-tech-silver text-sm max-w-sm mt-2"
                   >
                     Get funded up to $500,000 with up to 95% profit split.
                   </CardItem>
@@ -385,16 +407,16 @@ export default function Home() {
                   <div className="flex justify-between items-center mt-4">
                     <CardItem
                       translateZ={40}
-                      className="px-4 py-2 rounded-xl text-xs font-normal text-charcoal dark:text-ghost-white"
+                      className="px-4 py-2 rounded-xl text-xs font-normal text-ghost-white"
                     >
                       <div className="flex items-center gap-1">
-                        <FaStar className="text-light-blue mr-1" /> <span className="text-paynes-gray mr-2">★★★★☆</span> 4.3/5
+                        <FaStar className="text-neon-pink mr-1" /> <span className="text-tech-silver mr-2">★★★★☆</span> 4.3/5
                       </div>
                     </CardItem>
                     <Link href="/prop-firms">
                       <CardItem
                         translateZ={40}
-                        className="px-4 py-2 rounded-xl bg-paynes-gray text-ghost-white text-xs font-bold flex items-center"
+                        className="px-4 py-2 rounded-xl bg-deep-purple text-ghost-white text-xs font-bold flex items-center"
                       >
                         <FaChartBar className="mr-1" /> Compare Plans
                       </CardItem>
@@ -407,19 +429,19 @@ export default function Home() {
         </AnimatedSection>
 
         {/* Key Features Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-ghost-white dark:bg-charcoal relative z-20">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-neo-black">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              What's This <FlipWords words={["About?", "Platform?", "Service?", "Mission?"]} className="text-light-blue" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white">
+              What's This <FlipWords words={["About?", "Platform?", "Service?", "Mission?"]} className="text-cyber-blue" />
             </h2>
-            <p className="text-center text-paynes-gray dark:text-light-blue text-lg max-w-3xl mx-auto mb-16">
+            <p className="text-center text-tech-silver text-lg max-w-3xl mx-auto mb-16">
               brokerConnect was established to bridge the gap between traders and the most reputable brokers, prop firms, and trading mentors in the industry.
             </p>
             <div className="text-center mb-16">
               <Link href="/about">
                 <Button
                   containerClassName="w-48 h-12 mx-auto"
-                  className="bg-paynes-gray hover:bg-charcoal border-none text-ghost-white font-medium"
+                  className="bg-electric-indigo hover:bg-deep-purple border-none text-ghost-white font-medium shadow-neon-glow"
                 >
                   Learn More
                 </Button>
@@ -429,47 +451,47 @@ export default function Home() {
         </AnimatedSection>
 
         {/* Why Use Our Website Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-neo-black to-midnight">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              Why use <FlipWords words={["our website?", "brokerConnect?", "us for trading?", "verified partners?"]} className="text-light-blue" />
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white">
+              Why use <FlipWords words={["our website?", "brokerConnect?", "us for trading?", "verified partners?"]} className="text-neon-purple" />
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-ghost-white/70 dark:bg-paynes-gray/40 p-6 rounded-xl border border-light-blue/20">
-                <h3 className="text-xl font-semibold mb-3 text-charcoal dark:text-ghost-white">Verified Reputable Partners</h3>
-                <p className="text-paynes-gray dark:text-light-blue">We only feature brokers, prop firms, and trading mentors that have been thoroughly vetted for reliability, transparency, and credibility. This ensures you're connected with trustworthy industry leaders who have proven track records.</p>
+              <div className="bg-space-gray/40 p-6 rounded-xl border border-electric-indigo/20 hover:shadow-neon-glow transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Verified Reputable Partners</h3>
+                <p className="text-tech-silver">We only feature brokers, prop firms, and trading mentors that have been thoroughly vetted for reliability, transparency, and credibility. This ensures you're connected with trustworthy industry leaders who have proven track records.</p>
               </div>
               
-              <div className="bg-ghost-white/70 dark:bg-paynes-gray/40 p-6 rounded-xl border border-light-blue/20">
-                <h3 className="text-xl font-semibold mb-3 text-charcoal dark:text-ghost-white">Comprehensive information hub</h3>
-                <p className="text-paynes-gray dark:text-light-blue">From funding requirements to mentor-led communities on Discord and WhatsApp, we provide all the details you need in one place. No more second-guessing—everything you need to know is at your fingertips.</p>
+              <div className="bg-space-gray/40 p-6 rounded-xl border border-neon-purple/20 hover:shadow-purple-glow transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Comprehensive information hub</h3>
+                <p className="text-tech-silver">From funding requirements to mentor-led communities on Discord and WhatsApp, we provide all the details you need in one place. No more second-guessing—everything you need to know is at your fingertips.</p>
               </div>
               
-              <div className="bg-ghost-white/70 dark:bg-paynes-gray/40 p-6 rounded-xl border border-light-blue/20">
-                <h3 className="text-xl font-semibold mb-3 text-charcoal dark:text-ghost-white">Honest Testimonials</h3>
-                <p className="text-paynes-gray dark:text-light-blue">Gain confidence in your choices with authentic testimonials from real traders. Our platform showcases genuine feedback to help you understand the strengths of each service and make informed decisions.</p>
+              <div className="bg-space-gray/40 p-6 rounded-xl border border-cyber-blue/20 hover:shadow-neon-glow transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Honest Testimonials</h3>
+                <p className="text-tech-silver">Gain confidence in your choices with authentic testimonials from real traders. Our platform showcases genuine feedback to help you understand the strengths of each service and make informed decisions.</p>
               </div>
               
-              <div className="bg-ghost-white/70 dark:bg-paynes-gray/40 p-6 rounded-xl border border-light-blue/20">
-                <h3 className="text-xl font-semibold mb-3 text-charcoal dark:text-ghost-white">Tailored trading support</h3>
-                <p className="text-paynes-gray dark:text-light-blue">Whether you're a beginner or a seasoned trader, our website is designed to guide you towards services that fit your specific trading style, goals, and level of experience. We help you find the perfect partners to elevate your trading journey.</p>
+              <div className="bg-space-gray/40 p-6 rounded-xl border border-neon-pink/20 hover:shadow-pink-glow transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-ghost-white">Tailored trading support</h3>
+                <p className="text-tech-silver">Whether you're a beginner or a seasoned trader, our website is designed to guide you towards services that fit your specific trading style, goals, and level of experience. We help you find the perfect partners to elevate your trading journey.</p>
               </div>
             </div>
           </div>
         </AnimatedSection>
 
         {/* Recommended Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-light-blue/20 to-ghost-white dark:from-paynes-gray/50 dark:to-charcoal">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-neo-black">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              Recommended <FlipWords words={["for you", "brokers", "mentors", "prop firms"]} className="text-light-blue" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-ghost-white">
+              Recommended <FlipWords words={["for you", "brokers", "mentors", "prop firms"]} className="text-cyber-blue" />
             </h2>
             
             <div className="flex justify-center mt-8">
               <Link href="/brokers">
                 <Button
                   containerClassName="w-48 h-12"
-                  className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium"
+                  className="bg-cyber-blue hover:bg-electric-indigo border-none text-neo-black font-medium shadow-neon-glow"
                 >
                   See Catalog
                 </Button>
@@ -479,16 +501,16 @@ export default function Home() {
         </AnimatedSection>
 
         {/* Testimonials Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 bg-gradient-to-b from-midnight to-neo-black">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white">
-              <FlipWords words={["Testimonials", "Success Stories", "Real Traders", "User Feedback"]} className="text-light-blue" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-12 text-ghost-white">
+              <FlipWords words={["Testimonials", "Success Stories", "Real Traders", "User Feedback"]} className="text-neon-pink" />
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-ghost-white dark:bg-charcoal p-6 rounded-xl border border-light-blue/20 text-left">
+              <div className="bg-midnight p-6 rounded-xl border border-cyber-blue/20 text-left hover:shadow-neon-glow transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-paynes-gray/30">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-cyber-blue/30">
                     <Image 
                       src="/testimonials/avatar1.jpg" 
                       alt="Riaan Young" 
@@ -498,16 +520,16 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-medium text-charcoal dark:text-ghost-white">Riaan Young</h3>
-                    <p className="text-sm text-paynes-gray dark:text-light-blue">Capital Bulls Member</p>
+                    <h3 className="font-medium text-ghost-white">Riaan Young</h3>
+                    <p className="text-sm text-tech-silver">Capital Bulls Member</p>
                   </div>
                 </div>
-                <p className="text-paynes-gray dark:text-light-blue">"Good evening ELITE !! Just got home now, Had rugby practice. TP CAME IN CLUTCH WITH DOW, We must love it !!! @Capital Bulls, once again, Never disappoints. Made over 8k today starting with 750... WOWWWW."</p>
+                <p className="text-tech-silver">"Good evening ELITE !! Just got home now, Had rugby practice. TP CAME IN CLUTCH WITH DOW, We must love it !!! @Capital Bulls, once again, Never disappoints. Made over 8k today starting with 750... WOWWWW."</p>
               </div>
               
-              <div className="bg-ghost-white dark:bg-charcoal p-6 rounded-xl border border-light-blue/20 text-left">
+              <div className="bg-midnight p-6 rounded-xl border border-neon-purple/20 text-left hover:shadow-purple-glow transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-paynes-gray/30">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-neon-purple/30">
                     <Image 
                       src="/testimonials/avatar2.jpg" 
                       alt="Koketso" 
@@ -517,16 +539,16 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-medium text-charcoal dark:text-ghost-white">Koketso</h3>
-                    <p className="text-sm text-paynes-gray dark:text-light-blue">Capital Bulls Follower</p>
+                    <h3 className="font-medium text-ghost-white">Koketso</h3>
+                    <p className="text-sm text-tech-silver">Capital Bulls Follower</p>
                   </div>
                 </div>
-                <p className="text-paynes-gray dark:text-light-blue">"Thank you for your advice, saw your video just now now and just bought a robot. Even now I'm still waiting for the robot lost my money. Now I'm going to follow you"</p>
+                <p className="text-tech-silver">"Thank you for your advice, saw your video just now now and just bought a robot. Even now I'm still waiting for the robot lost my money. Now I'm going to follow you"</p>
               </div>
 
-              <div className="bg-ghost-white dark:bg-charcoal p-6 rounded-xl border border-light-blue/20 text-left">
+              <div className="bg-midnight p-6 rounded-xl border border-neon-pink/20 text-left hover:shadow-pink-glow transition-all duration-300">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border border-paynes-gray/30">
+                  <div className="w-12 h-12 rounded-full overflow-hidden border border-neon-pink/30">
                     <Image 
                       src="/testimonials/avatar3.jpg" 
                       alt="Tiaan Saayman" 
@@ -536,45 +558,45 @@ export default function Home() {
                     />
                   </div>
                   <div className="ml-4">
-                    <h3 className="font-medium text-charcoal dark:text-ghost-white">Tiaan Saayman</h3>
-                    <p className="text-sm text-paynes-gray dark:text-light-blue">Capital Bulls Member</p>
+                    <h3 className="font-medium text-ghost-white">Tiaan Saayman</h3>
+                    <p className="text-sm text-tech-silver">Capital Bulls Member</p>
                   </div>
                 </div>
-                <p className="text-paynes-gray dark:text-light-blue">"Made 15k in 2 weeks just by checking out your story and keeping an eye on the market i will be joining soon, u know what you doing bro love it!"</p>
+                <p className="text-tech-silver">"Made 15k in 2 weeks just by checking out your story and keeping an eye on the market i will be joining soon, u know what you doing bro love it!"</p>
               </div>
             </div>
           </div>
         </AnimatedSection>
 
         {/* Trusted by Section */}
-        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-ghost-white dark:bg-charcoal">
+        <AnimatedSection animation="slide" direction="up" className="py-20 px-4 md:px-8 bg-neo-black">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-charcoal dark:text-ghost-white flex items-center justify-center">
-              <FaUsers className="mr-3 text-light-blue" /> Trusted by Thousands
+            <h2 className="text-center text-3xl md:text-5xl font-bold mb-12 text-ghost-white flex items-center justify-center">
+              <FaUsers className="mr-3 text-electric-indigo" /> Trusted by Thousands
             </h2>
           </div>
         </AnimatedSection>
         
 
         {/* Footer */}
-        <footer className="py-10 px-4 bg-charcoal border-t border-light-blue/10">
+        <footer className="py-10 px-4 bg-neo-black border-t border-cyber-blue/10">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white flex items-center">
-                  <FaChartLine className="mr-2 text-light-blue" /> brokerConnect
+                  <FaChartLine className="mr-2 text-cyber-blue" /> brokerConnect
                 </h3>
-                <p className="text-light-blue text-sm">
+                <p className="text-tech-silver text-sm">
                   The premier platform connecting traders with verified professionals.
                 </p>
                 <div className="mt-4 flex space-x-4">
-                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                  <a href="#" className="text-ghost-white hover:text-cyber-blue transition-colors">
                     <FaTwitter />
                   </a>
-                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                  <a href="#" className="text-ghost-white hover:text-neon-purple transition-colors">
                     <FaLinkedin />
                   </a>
-                  <a href="#" className="text-ghost-white hover:text-light-blue transition-colors">
+                  <a href="#" className="text-ghost-white hover:text-neon-pink transition-colors">
                     <FaInstagram />
                   </a>
                 </div>
@@ -582,25 +604,25 @@ export default function Home() {
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Quick Links</h3>
-                <ul className="space-y-2 text-light-blue text-sm">
+                <ul className="space-y-2 text-tech-silver text-sm">
                   <li>
                     <Link href="/brokers" className="hover:text-ghost-white flex items-center">
-                      <FaChartLine className="mr-2" /> Find a Broker
+                      <FaChartLine className="mr-2 text-cyber-blue" /> Find a Broker
                     </Link>
                   </li>
                   <li>
                     <Link href="/mentors" className="hover:text-ghost-white flex items-center">
-                      <FaUserTie className="mr-2" /> Find a Mentor
+                      <FaUserTie className="mr-2 text-neon-purple" /> Find a Mentor
                     </Link>
                   </li>
                   <li>
                     <Link href="/prop-firms" className="hover:text-ghost-white flex items-center">
-                      <FaBuilding className="mr-2" /> Prop Firm Comparison
+                      <FaBuilding className="mr-2 text-neon-pink" /> Prop Firm Comparison
                     </Link>
                   </li>
                   <li>
                     <Link href="/contact" className="hover:text-ghost-white flex items-center">
-                      <FaExclamationTriangle className="mr-2" /> Report a Scam
+                      <FaExclamationTriangle className="mr-2 text-electric-indigo" /> Report a Scam
                     </Link>
                   </li>
                 </ul>
@@ -608,25 +630,25 @@ export default function Home() {
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Resources</h3>
-                <ul className="space-y-2 text-light-blue text-sm">
+                <ul className="space-y-2 text-tech-silver text-sm">
                   <li>
                     <Link href="/faq" className="hover:text-ghost-white flex items-center">
-                      <FaQuestionCircle className="mr-2" /> FAQ
+                      <FaQuestionCircle className="mr-2 text-cyber-teal" /> FAQ
                     </Link>
                   </li>
                   <li>
                     <Link href="/about" className="hover:text-ghost-white flex items-center">
-                      <FaInfoCircle className="mr-2" /> About Us
+                      <FaInfoCircle className="mr-2 text-cyber-blue" /> About Us
                     </Link>
                   </li>
                   <li>
                     <Link href="/brokers" className="hover:text-ghost-white flex items-center">
-                      <FaShieldAlt className="mr-2" /> Broker Verification
+                      <FaShieldAlt className="mr-2 text-electric-indigo" /> Broker Verification
                     </Link>
                   </li>
                   <li>
                     <Link href="/prop-firms" className="hover:text-ghost-white flex items-center">
-                      <FaBuilding className="mr-2" /> Prop Firms
+                      <FaBuilding className="mr-2 text-neon-pink" /> Prop Firms
                     </Link>
                   </li>
                 </ul>
@@ -634,35 +656,35 @@ export default function Home() {
               
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white">Connect</h3>
-                <ul className="space-y-2 text-light-blue text-sm">
+                <ul className="space-y-2 text-tech-silver text-sm">
                   <li>
                     <Link href="/contact" className="hover:text-ghost-white flex items-center">
-                      <FaEnvelope className="mr-2" /> Contact Us
+                      <FaEnvelope className="mr-2 text-cyber-blue" /> Contact Us
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="hover:text-ghost-white flex items-center">
-                      <FaTwitter className="mr-2" /> Twitter
+                      <FaTwitter className="mr-2 text-neon-purple" /> Twitter
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="hover:text-ghost-white flex items-center">
-                      <FaInstagram className="mr-2" /> Instagram
+                      <FaInstagram className="mr-2 text-neon-pink" /> Instagram
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="hover:text-ghost-white flex items-center">
-                      <FaTelegram className="mr-2" /> Telegram
+                      <FaTelegram className="mr-2 text-electric-indigo" /> Telegram
                     </Link>
                   </li>
                 </ul>
               </div>
             </div>
             
-            <div className="border-t border-light-blue/10 mt-10 pt-6 text-center text-ghost-white text-sm">
+            <div className="border-t border-cyber-blue/10 mt-10 pt-6 text-center text-ghost-white text-sm">
               <p>© 2023 brokerConnect Platform. All rights reserved.</p>
-              <p className="mt-2 text-light-blue flex items-center justify-center">
-                <FaShieldAlt className="mr-2" /> brokerConnect is not a broker or financial advisor. Trading involves risk.
+              <p className="mt-2 text-tech-silver flex items-center justify-center">
+                <FaShieldAlt className="mr-2 text-cyber-blue" /> brokerConnect is not a broker or financial advisor. Trading involves risk.
               </p>
             </div>
           </div>

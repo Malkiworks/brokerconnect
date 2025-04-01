@@ -10,6 +10,8 @@ interface SectionHeaderProps {
   subtitle?: string;
   align?: "left" | "center" | "right";
   className?: string;
+  titleClassName?: string;
+  subtitleClassName?: string;
   animated?: boolean;
 }
 
@@ -19,6 +21,8 @@ export function SectionHeader({
   subtitle,
   align = "center",
   className,
+  titleClassName,
+  subtitleClassName,
   animated = true,
 }: SectionHeaderProps) {
   const alignmentClasses = {
@@ -47,13 +51,14 @@ export function SectionHeader({
     >
       <h2 className={cn(
         "text-3xl md:text-5xl font-bold text-charcoal dark:text-ghost-white",
-        align === "center" ? "flex items-center justify-center" : "flex items-center"
+        align === "center" ? "flex items-center justify-center" : "flex items-center",
+        titleClassName
       )}>
-        {icon && <span className="mr-3 text-light-blue">{icon}</span>}
+        {icon && <span className="mr-3">{icon}</span>}
         {title}
       </h2>
       {subtitle && (
-        <p className="text-paynes-gray dark:text-light-blue text-lg max-w-2xl mx-auto">
+        <p className={cn("text-paynes-gray dark:text-light-blue text-lg max-w-2xl mx-auto", subtitleClassName)}>
           {subtitle}
         </p>
       )}

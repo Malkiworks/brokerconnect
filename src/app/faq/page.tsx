@@ -22,16 +22,16 @@ const FAQItem = ({ question, answer, icon }: FAQItemProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="border-b border-paynes-gray/20 last:border-b-0">
+    <div className="border-b border-cyber-blue/20 last:border-b-0">
       <button
         className="flex justify-between items-center w-full py-6 text-left"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h3 className="text-xl font-semibold text-charcoal dark:text-ghost-white flex items-center">
-          <span className="text-light-blue mr-3 text-xl">{icon}</span>
+        <h3 className="text-xl font-semibold text-ghost-white flex items-center">
+          <span className="text-cyber-blue mr-3 text-xl">{icon}</span>
           {question}
         </h3>
-        <span className="text-light-blue text-xl transform transition-transform duration-200">
+        <span className="text-cyber-blue text-xl transform transition-transform duration-200">
           {isOpen ? <FaChevronUp /> : <FaChevronDown />}
         </span>
       </button>
@@ -40,7 +40,7 @@ const FAQItem = ({ question, answer, icon }: FAQItemProps) => {
           isOpen ? "max-h-96 pb-6" : "max-h-0"
         }`}
       >
-        <div className="pl-10 text-paynes-gray dark:text-light-blue leading-relaxed">
+        <div className="pl-10 text-tech-silver leading-relaxed">
           <p>{answer}</p>
         </div>
       </div>
@@ -105,15 +105,17 @@ export default function FAQPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <AnimatedSection animation="fade" className="max-w-4xl mx-auto">
+      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-neo-black">
+        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
           <SectionHeader
-            icon={<FaQuestionCircle />}
+            icon={<FaQuestionCircle className="text-electric-indigo" />}
             title="Frequently Asked Questions"
             subtitle="Find answers to common questions about brokerConnect, our partners, and how we can help you on your trading journey."
+            titleClassName="text-ghost-white"
+            subtitleClassName="text-tech-silver"
           />
 
-          <AnimatedSection animation="slide" direction="up" className="bg-ghost-white/70 dark:bg-charcoal/60 rounded-xl border border-light-blue/20 p-8 shadow-lg">
+          <AnimatedSection animation="slide" direction="up" className="bg-midnight/70 rounded-xl border border-electric-indigo/20 p-8 shadow-neon-glow">
             <StaggeredList staggerDelay={0.08}>
               {faqs.map((faq, index) => (
                 <FAQItem key={index} question={faq.question} answer={faq.answer} icon={faq.icon} />
@@ -122,13 +124,13 @@ export default function FAQPage() {
           </AnimatedSection>
 
           <AnimatedSection animation="slide" direction="up" delay={0.3} className="mt-16 text-center">
-            <p className="text-paynes-gray dark:text-light-blue mb-6">
+            <p className="text-tech-silver mb-6">
               Still have questions? We're here to help!
             </p>
             <Link href="/contact">
               <Button 
                 containerClassName="w-auto h-14"
-                className="bg-light-blue hover:bg-paynes-gray text-charcoal font-semibold px-8"
+                className="bg-electric-indigo hover:bg-deep-purple text-ghost-white font-semibold px-8 shadow-neon-glow"
                 icon={<FaEnvelope />}
               >
                 Contact Us

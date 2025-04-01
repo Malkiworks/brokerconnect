@@ -10,36 +10,36 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-charcoal backdrop-blur-lg border-b border-light-blue/20">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-neo-black backdrop-blur-lg border-b border-cyber-blue/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <Link href="/" className="text-2xl font-bold text-ghost-white flex items-center">
-                <FaChartLine className="mr-2 text-light-blue" /> brokerConnect
+                <FaChartLine className="mr-2 text-cyber-blue" /> brokerConnect
               </Link>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
-                <Link href="/" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/" className="text-ghost-white hover:text-cyber-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaHome className="mr-1" /> Home
                 </Link>
-                <Link href="/brokers" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/brokers" className="text-ghost-white hover:text-neon-purple px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaChartLine className="mr-1" /> Brokers
                 </Link>
-                <Link href="/mentors" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/mentors" className="text-ghost-white hover:text-cyber-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaUserTie className="mr-1" /> Mentors
                 </Link>
-                <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/prop-firms" className="text-ghost-white hover:text-neon-pink px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaBuilding className="mr-1" /> Prop Firms
                 </Link>
-                <Link href="/about" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/about" className="text-ghost-white hover:text-electric-indigo px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaInfoCircle className="mr-1" /> About
                 </Link>
-                <Link href="/contact" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/contact" className="text-ghost-white hover:text-cyber-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaEnvelope className="mr-1" /> Contact
                 </Link>
-                <Link href="/faq" className="text-ghost-white hover:text-light-blue px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                <Link href="/faq" className="text-ghost-white hover:text-cyber-teal px-3 py-2 rounded-md text-sm font-medium flex items-center">
                   <FaQuestion className="mr-1" /> FAQ
                 </Link>
               </div>
@@ -50,7 +50,7 @@ export function Navbar() {
               <Link href="/contact">
                 <Button
                   containerClassName="w-36 h-9"
-                  className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium flex items-center justify-center"
+                  className="bg-neon-pink hover:bg-deep-purple border-none text-ghost-white font-medium flex items-center justify-center shadow-pink-glow"
                 >
                   <FaExclamationTriangle className="mr-1" /> Report Scam
                 </Button>
@@ -60,7 +60,7 @@ export function Navbar() {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-ghost-white hover:text-light-blue hover:bg-paynes-gray focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-ghost-white hover:text-cyber-blue hover:bg-midnight focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
@@ -103,33 +103,33 @@ export function Navbar() {
 
       {/* Mobile menu, show/hide based on menu state */}
       <div className={cn("md:hidden", isMenuOpen ? "block" : "hidden")}>
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-charcoal">
-          <Link href="/" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neo-black">
+          <Link href="/" className="text-ghost-white hover:text-cyber-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaHome className="mr-2" /> Home
           </Link>
-          <Link href="/brokers" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/brokers" className="text-ghost-white hover:text-neon-purple block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaChartLine className="mr-2" /> Brokers
           </Link>
-          <Link href="/mentors" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/mentors" className="text-ghost-white hover:text-cyber-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaUserTie className="mr-2" /> Mentors
           </Link>
-          <Link href="/prop-firms" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/prop-firms" className="text-ghost-white hover:text-neon-pink block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaBuilding className="mr-2" /> Prop Firms
           </Link>
-          <Link href="/about" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/about" className="text-ghost-white hover:text-electric-indigo block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaInfoCircle className="mr-2" /> About
           </Link>
-          <Link href="/contact" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/contact" className="text-ghost-white hover:text-cyber-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaEnvelope className="mr-2" /> Contact
           </Link>
-          <Link href="/faq" className="text-ghost-white hover:text-light-blue block px-3 py-2 rounded-md text-base font-medium flex items-center">
+          <Link href="/faq" className="text-ghost-white hover:text-cyber-teal block px-3 py-2 rounded-md text-base font-medium flex items-center">
             <FaQuestion className="mr-2" /> FAQ
           </Link>
           <div className="mt-4">
             <Link href="/contact">
               <Button
                 containerClassName="w-full h-10"
-                className="bg-light-blue hover:bg-paynes-gray border-none text-charcoal font-medium flex items-center justify-center"
+                className="bg-neon-pink hover:bg-deep-purple border-none text-ghost-white font-medium flex items-center justify-center shadow-pink-glow"
               >
                 <FaExclamationTriangle className="mr-2" /> Report Scam
               </Button>

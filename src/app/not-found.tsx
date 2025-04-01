@@ -10,8 +10,8 @@ export default function NotFound() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <div className="max-w-7xl mx-auto text-center">
+      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}

@@ -13,93 +13,97 @@ export default function ContactPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-gradient-to-b from-ghost-white to-light-blue/20 dark:from-charcoal dark:to-paynes-gray/50">
-        <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
-          <SectionHeader 
-            title="Get in Touch"
-            icon={<FaEnvelope />}
-            subtitle="Have questions about our services or need support with your trading journey? Our team is here to help."
-          />
-          
-          <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" staggerDelay={0.1}>
-            <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-light-blue text-4xl mb-4 flex justify-center">
-                <FaEnvelope />
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Email Us</h3>
-              <p className="text-paynes-gray dark:text-light-blue mb-4">
-                Send us an email and we'll get back to you within 24 hours.
-              </p>
-              <a href="mailto:support@brokerconnect.com" className="text-light-blue hover:text-paynes-gray transition-colors duration-300 font-medium text-lg flex items-center justify-center">
-                <FaEnvelope className="mr-2" /> support@brokerconnect.com
-              </a>
-            </div>
+      <main className="min-h-screen pt-24 pb-16 px-4 md:px-8 bg-neo-black">
+        <div className="max-w-4xl mx-auto">
+          <AnimatedSection animation="fade" className="max-w-7xl mx-auto">
+            <SectionHeader 
+              title="Get in Touch"
+              icon={<FaEnvelope className="text-cyber-blue" />}
+              subtitle="Have questions about our services or need support with your trading journey? Our team is here to help."
+              titleClassName="text-ghost-white"
+              subtitleClassName="text-tech-silver"
+            />
             
-            <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-light-blue text-4xl mb-4 flex justify-center">
-                <FaPhone />
+            <StaggeredList className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" staggerDelay={0.1}>
+              <div className="bg-midnight p-8 rounded-xl border border-cyber-blue/20 text-center shadow-blue-glow hover:shadow-neon-glow transition-all duration-300">
+                <div className="text-cyber-blue text-4xl mb-4 flex justify-center">
+                  <FaEnvelope />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-ghost-white">Email Us</h3>
+                <p className="text-tech-silver mb-4">
+                  Send us an email and we'll get back to you within 24 hours.
+                </p>
+                <a href="mailto:support@brokerconnect.com" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
+                  <FaEnvelope className="mr-2" /> support@brokerconnect.com
+                </a>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Call Us</h3>
-              <p className="text-paynes-gray dark:text-light-blue mb-4">
-                Speak directly with our support team during business hours.
-              </p>
-              <a href="tel:+18001234567" className="text-light-blue hover:text-paynes-gray transition-colors duration-300 font-medium text-lg flex items-center justify-center">
-                <FaPhone className="mr-2" /> +1 (800) 123-4567
-              </a>
-            </div>
+              
+              <div className="bg-midnight p-8 rounded-xl border border-neon-purple/20 text-center shadow-purple-glow hover:shadow-neon-glow transition-all duration-300">
+                <div className="text-neon-purple text-4xl mb-4 flex justify-center">
+                  <FaPhone />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-ghost-white">Call Us</h3>
+                <p className="text-tech-silver mb-4">
+                  Speak directly with our support team during business hours.
+                </p>
+                <a href="tel:+18001234567" className="text-neon-purple hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
+                  <FaPhone className="mr-2" /> +1 (800) 123-4567
+                </a>
+              </div>
+              
+              <div className="bg-midnight p-8 rounded-xl border border-neon-pink/20 text-center shadow-pink-glow hover:shadow-neon-glow transition-all duration-300">
+                <div className="text-neon-pink text-4xl mb-4 flex justify-center">
+                  <FaTwitter />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-ghost-white">Follow Us</h3>
+                <p className="text-tech-silver mb-4">
+                  Connect with us on social media for updates and trading tips.
+                </p>
+                <div className="flex justify-center space-x-4">
+                  <a href="#" className="text-neon-pink hover:text-electric-indigo transition-colors duration-300 flex items-center">
+                    <FaTwitter className="mr-1" /> Twitter
+                  </a>
+                  <a href="#" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 flex items-center">
+                    <FaLinkedin className="mr-1" /> LinkedIn
+                  </a>
+                  <a href="#" className="text-neon-purple hover:text-electric-indigo transition-colors duration-300 flex items-center">
+                    <FaInstagram className="mr-1" /> Instagram
+                  </a>
+                </div>
+              </div>
+            </StaggeredList>
             
-            <div className="bg-ghost-white dark:bg-charcoal p-8 rounded-xl border border-paynes-gray/20 text-center shadow-lg hover:shadow-xl transition-all duration-300">
-              <div className="text-light-blue text-4xl mb-4 flex justify-center">
-                <FaTwitter />
+            <AnimatedSection animation="slide" direction="up" delay={0.3} className="">
+              <div className="mt-12 text-center">
+                <p className="text-tech-silver mb-4">
+                  Want to learn more about our services before reaching out?
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link href="/about">
+                    <Button 
+                      icon={<FaInfoCircle />}
+                      variant="outline"
+                      containerClassName="w-auto h-14"
+                      className="border-cyber-blue text-ghost-white hover:bg-cyber-blue/10 shadow-blue-glow"
+                    >
+                      About Us
+                    </Button>
+                  </Link>
+                  <Link href="/faq">
+                    <Button 
+                      icon={<FaQuestionCircle />}
+                      variant="outline"
+                      containerClassName="w-auto h-14"
+                      className="border-neon-purple text-ghost-white hover:bg-neon-purple/10 shadow-purple-glow"
+                    >
+                      FAQs
+                    </Button>
+                  </Link>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-charcoal dark:text-ghost-white">Follow Us</h3>
-              <p className="text-paynes-gray dark:text-light-blue mb-4">
-                Connect with us on social media for updates and trading tips.
-              </p>
-              <div className="flex justify-center space-x-4">
-                <a href="#" className="text-light-blue hover:text-paynes-gray transition-colors duration-300 flex items-center">
-                  <FaTwitter className="mr-1" /> Twitter
-                </a>
-                <a href="#" className="text-light-blue hover:text-paynes-gray transition-colors duration-300 flex items-center">
-                  <FaLinkedin className="mr-1" /> LinkedIn
-                </a>
-                <a href="#" className="text-light-blue hover:text-paynes-gray transition-colors duration-300 flex items-center">
-                  <FaInstagram className="mr-1" /> Instagram
-                </a>
-              </div>
-            </div>
-          </StaggeredList>
-          
-          <AnimatedSection animation="slide" direction="up" delay={0.3} className="">
-            <div className="mt-12 text-center">
-              <p className="text-paynes-gray dark:text-light-blue mb-4">
-                Want to learn more about our services before reaching out?
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/about">
-                  <Button 
-                    icon={<FaInfoCircle />}
-                    variant="outline"
-                    containerClassName="w-auto h-14"
-                    className="border-light-blue text-charcoal dark:text-ghost-white hover:bg-light-blue/10"
-                  >
-                    About Us
-                  </Button>
-                </Link>
-                <Link href="/faq">
-                  <Button 
-                    icon={<FaQuestionCircle />}
-                    variant="outline"
-                    containerClassName="w-auto h-14"
-                    className="border-light-blue text-charcoal dark:text-ghost-white hover:bg-light-blue/10"
-                  >
-                    FAQs
-                  </Button>
-                </Link>
-              </div>
-            </div>
+            </AnimatedSection>
           </AnimatedSection>
-        </AnimatedSection>
+        </div>
       </main>
     </>
   );

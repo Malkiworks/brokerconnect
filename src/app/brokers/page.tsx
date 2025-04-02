@@ -83,7 +83,7 @@ export default function BrokersPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <p className="text-center text-tech-silver mb-2">Create an account</p>
-                    <a href="https://www.xmza.com" target="_blank" rel="noopener noreferrer" className="w-full block">
+                    <a href="https://affs.click/lnjQo" target="_blank" rel="noopener noreferrer" className="w-full block">
                       <Button className="w-full bg-cyber-blue hover:bg-electric-indigo text-neo-black font-semibold flex items-center justify-center shadow-neon-glow">
                         <FaExternalLinkAlt className="mr-2" /> Sign up
                       </Button>
@@ -150,7 +150,7 @@ export default function BrokersPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <p className="text-center text-tech-silver mb-2">Create an account</p>
-                    <a href="https://www.ebc.com" target="_blank" rel="noopener noreferrer" className="w-full block">
+                    <a href="https://client.ebccrm.com/signup-c/D6325034-1nbDzr" target="_blank" rel="noopener noreferrer" className="w-full block">
                       <Button className="w-full bg-neon-purple hover:bg-deep-purple text-neo-black font-semibold flex items-center justify-center shadow-purple-glow">
                         <FaExternalLinkAlt className="mr-2" /> Sign up
                       </Button>
@@ -217,7 +217,7 @@ export default function BrokersPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <p className="text-center text-tech-silver mb-2">Create an account</p>
-                    <a href="https://www.eightcap.com" target="_blank" rel="noopener noreferrer" className="w-full block">
+                    <a href="https://join.eightcap.com/visit/?bta=42843&brand=eightcap" target="_blank" rel="noopener noreferrer" className="w-full block">
                       <Button className="w-full bg-neon-pink hover:bg-deep-purple text-neo-black font-semibold flex items-center justify-center shadow-pink-glow">
                         <FaExternalLinkAlt className="mr-2" /> Sign up
                       </Button>
@@ -284,7 +284,7 @@ export default function BrokersPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <p className="text-center text-tech-silver mb-2">Create an account</p>
-                    <a href="https://www.avatrade.com" target="_blank" rel="noopener noreferrer" className="w-full block">
+                    <a href="https://www.avatrade.com/trading-account?tag=208270" target="_blank" rel="noopener noreferrer" className="w-full block">
                       <Button className="w-full bg-electric-indigo hover:bg-deep-purple text-neo-black font-semibold flex items-center justify-center shadow-neon-glow">
                         <FaExternalLinkAlt className="mr-2" /> Sign up
                       </Button>

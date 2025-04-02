@@ -124,7 +124,7 @@ export default function PropFirmsPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <Button className="w-full bg-electric-indigo hover:bg-deep-purple text-ghost-white font-semibold py-3 flex items-center justify-center shadow-neon-glow">
-                      <Link href="https://ftmo.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                      <Link href="https://trader.ftmo.com/?affiliates=ybyzaxsCgavbSurBJjPY" target="_blank" className="block w-full h-full flex items-center justify-center">
                         <FaMoneyBillWave className="mr-2" /> Purchase a challenge
                       </Link>
                     </Button>
@@ -223,7 +223,7 @@ export default function PropFirmsPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <Button className="w-full bg-neon-purple hover:bg-deep-purple text-ghost-white font-semibold py-3 flex items-center justify-center shadow-purple-glow">
-                      <Link href="https://fxify.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                      <Link href="https://trader.fxify.com/purchasechallenge?affiliateId=5873" target="_blank" className="block w-full h-full flex items-center justify-center">
                         <FaMoneyBillWave className="mr-2" /> Purchase a challenge
                       </Link>
                     </Button>
@@ -322,7 +322,7 @@ export default function PropFirmsPage() {
                   
                   <CardItem translateZ="80" className="w-full mt-8">
                     <Button className="w-full bg-neon-pink hover:bg-deep-purple text-ghost-white font-semibold py-3 flex items-center justify-center shadow-pink-glow">
-                      <Link href="https://aurafunded.com/" target="_blank" className="block w-full h-full flex items-center justify-center">
+                      <Link href="https://aurafunded.com/ref/Capital%20Bulls/" target="_blank" className="block w-full h-full flex items-center justify-center">
                         <FaMoneyBillWave className="mr-2" /> Purchase a challenge
                       </Link>
                     </Button>

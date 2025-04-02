@@ -7,7 +7,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { SectionHeader } from "@/components/ui/section-header";
 import { AnimatedSection } from "@/components/ui/animated-section";
 import { StaggeredList } from "@/components/ui/scroll-animations";
-import { FaEnvelope, FaPhone, FaTwitter, FaLinkedin, FaInstagram, FaInfoCircle, FaQuestionCircle } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaInstagram, FaDiscord, FaInfoCircle, FaQuestionCircle } from "react-icons/fa";
 
 export default function ContactPage() {
   return (
@@ -33,8 +33,8 @@ export default function ContactPage() {
                 <p className="text-tech-silver mb-4">
                   Send us an email and we'll get back to you within 24 hours.
                 </p>
-                <a href="mailto:support@brokerconnect.com" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
-                  <FaEnvelope className="mr-2" /> support@brokerconnect.com
+                <a href="mailto:rxtchet@therxtchetbrand.com" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
+                  <FaEnvelope className="mr-2" /> rxtchet@therxtchetbrand.com
                 </a>
               </div>
               
@@ -46,28 +46,25 @@ export default function ContactPage() {
                 <p className="text-tech-silver mb-4">
                   Speak directly with our support team during business hours.
                 </p>
-                <a href="tel:+18001234567" className="text-neon-purple hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
-                  <FaPhone className="mr-2" /> +1 (800) 123-4567
+                <a href="tel:+27645019037" className="text-neon-purple hover:text-electric-indigo transition-colors duration-300 font-medium text-lg flex items-center justify-center">
+                  <FaPhone className="mr-2" /> +27 064 501 9037
                 </a>
               </div>
               
               <div className="bg-midnight p-8 rounded-xl border border-neon-pink/20 text-center shadow-pink-glow hover:shadow-neon-glow transition-all duration-300">
                 <div className="text-neon-pink text-4xl mb-4 flex justify-center">
-                  <FaTwitter />
+                  <FaInstagram />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-ghost-white">Follow Us</h3>
                 <p className="text-tech-silver mb-4">
                   Connect with us on social media for updates and trading tips.
                 </p>
                 <div className="flex justify-center space-x-4">
-                  <a href="#" className="text-neon-pink hover:text-electric-indigo transition-colors duration-300 flex items-center">
-                    <FaTwitter className="mr-1" /> Twitter
-                  </a>
-                  <a href="#" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 flex items-center">
-                    <FaLinkedin className="mr-1" /> LinkedIn
-                  </a>
-                  <a href="#" className="text-neon-purple hover:text-electric-indigo transition-colors duration-300 flex items-center">
+                  <a href="https://www.instagram.com/capitalbulls_za" className="text-neon-pink hover:text-electric-indigo transition-colors duration-300 flex items-center">
                     <FaInstagram className="mr-1" /> Instagram
+                  </a>
+                  <a href="https://discord.com/invite/KqyjCFGMwV" className="text-cyber-blue hover:text-electric-indigo transition-colors duration-300 flex items-center">
+                    <FaDiscord className="mr-1" /> Discord
                   </a>
                 </div>
               </div>

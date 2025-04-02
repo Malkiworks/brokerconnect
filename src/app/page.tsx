@@ -9,7 +9,7 @@ import { AnimatedSection } from "@/components/ui/animated-section";
 import { StaggeredList } from "@/components/ui/scroll-animations";
 import Image from "next/image";
 import Link from "next/link";
-import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaTwitter, FaLinkedin, FaInstagram, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaTelegram, FaCheck, FaLightbulb, FaAward, FaCreditCard, FaUnlock, FaRocket } from "react-icons/fa";
+import { FaChartLine, FaUserTie, FaBuilding, FaStar, FaGlobe, FaMoneyBillWave, FaShieldAlt, FaGraduationCap, FaHandshake, FaChartBar, FaUsers, FaSearch, FaInstagram, FaDiscord, FaExclamationTriangle, FaQuestionCircle, FaInfoCircle, FaEnvelope, FaCheck, FaLightbulb, FaAward, FaCreditCard, FaUnlock, FaRocket } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -739,14 +739,11 @@ export default function Home() {
                   The premier platform connecting traders with verified professionals.
                 </p>
                 <div className="mt-4 flex space-x-4">
-                  <a href="#" className="text-ghost-white hover:text-cyber-blue transition-colors">
-                    <FaTwitter />
-                  </a>
-                  <a href="#" className="text-ghost-white hover:text-neon-purple transition-colors">
-                    <FaLinkedin />
-                  </a>
-                  <a href="#" className="text-ghost-white hover:text-neon-pink transition-colors">
+                  <a href="https://www.instagram.com/capitalbulls_za" className="text-ghost-white hover:text-neon-pink transition-colors">
                     <FaInstagram />
+                  </a>
+                  <a href="https://discord.com/invite/KqyjCFGMwV" className="text-ghost-white hover:text-cyber-blue transition-colors">
+                    <FaDiscord />
                   </a>
                 </div>
               </div>
@@ -812,19 +809,14 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-ghost-white flex items-center">
-                      <FaTwitter className="mr-2 text-neon-purple" /> Twitter
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="hover:text-ghost-white flex items-center">
+                    <a href="https://www.instagram.com/capitalbulls_za" className="hover:text-ghost-white flex items-center">
                       <FaInstagram className="mr-2 text-neon-pink" /> Instagram
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link href="#" className="hover:text-ghost-white flex items-center">
-                      <FaTelegram className="mr-2 text-electric-indigo" /> Telegram
-                    </Link>
+                    <a href="https://discord.com/invite/KqyjCFGMwV" className="hover:text-ghost-white flex items-center">
+                      <FaDiscord className="mr-2 text-electric-indigo" /> Discord
+                    </a>
                   </li>
                 </ul>
               </div>

@@ -827,6 +827,11 @@ export default function Home() {
               <p className="mt-2 text-tech-silver flex items-center justify-center">
                 <FaShieldAlt className="mr-2 text-cyber-blue" /> brokerConnect is not a broker or financial advisor. Trading involves risk.
               </p>
+              <p className="mt-4 text-tech-silver text-xs">
+                <a href="https://busyoaks.co.za" target="_blank" rel="noopener noreferrer" className="hover:text-ghost-white transition-colors flex items-center justify-center">
+                  Made with <span className="mx-1 text-ghost-white">♡</span> by busyOaks
+                </a>
+              </p>
             </div>
           </div>
         </footer>

@@ -733,7 +733,15 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4 text-ghost-white flex items-center">
-                  <FaChartLine className="mr-2 text-cyber-blue" /> brokerConnect
+                  <Image 
+                    src="/logo-transparent.png"
+                    alt="brokerConnect Logo"
+                    width={893}
+                    height={124}
+                    className="h-8 w-auto object-contain"
+                    style={{ objectFit: 'contain' }}
+                    priority
+                  />
                 </h3>
                 <p className="text-tech-silver text-sm">
                   The premier platform connecting traders with verified professionals.

@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { FaHome, FaChartLine, FaUserTie, FaBuilding, FaInfoCircle, FaEnvelope, FaQuestion, FaExclamationTriangle } from "react-icons/fa";
 
@@ -15,8 +16,16 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <Link href="/" className="text-2xl font-bold text-ghost-white flex items-center">
-                <FaChartLine className="mr-2 text-cyber-blue" /> brokerConnect
+              <Link href="/" className="flex items-center">
+                <Image 
+                  src="/logo-transparent.png"
+                  alt="brokerConnect Logo"
+                  width={893}
+                  height={124}
+                  className="h-10 w-auto object-contain"
+                  style={{ objectFit: 'contain' }}
+                  priority
+                />
               </Link>
             </div>
             <div className="hidden md:block">
